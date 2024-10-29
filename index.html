@@ -15,7 +15,21 @@
     <link rel="stylesheet" href="/assets/styles/style.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">О компании</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Наши аптеки</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Свяжитесь с нами</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section class="hero-section">
         <div class="hero-content-wrapper">
@@ -87,10 +101,92 @@
       <!--Второй экран. Конец-->
 
       <!--Третий экран. Начало-->
+      <section class="mission">
+        <h3 class="mission__title">Наша миссия</h3>
+        <p class="mission__text">
+          Наша миссия — обеспечивать доступность лекарств и помогать людям
+          заботиться о своем здоровье. Мы уверены, что индивидуальный подход к
+          каждому клиенту и высокое качество препаратов играют ключевую роль в
+          этом процессе. В «НовгородФармации» мы стремимся предложить не только
+          стандартные лекарства, но и особые решения, соответствующие
+          индивидуальным потребностям наших клиентов. В этом нам помогает наше
+          собственное аптечное производство, которое сочетает традиции и
+          современные технологии, что позволяет создавать эффективные и
+          безопасные лекарства для каждого клиента.
+        </p>
+      </section>
       <!--Третий экран. Конец-->
 
       <!--Четвертый экран. Начало-->
       <section class="advantages">
+        <h2 class="advantages__title">Преимущества</h2>
+        <div class="advantages__box">
+          <div class="advantages__item">
+            <div class="advantages__icon">
+              <img src="/assets/images/apteka-icon.svg" alt="icon" />
+            </div>
+            <div class="advantages__text-box">
+              <h3 class="advantages__subtitle">
+                Никаких добавок, консервантов и красителей
+              </h3>
+              <p class="advantages__text">
+                Наши лекарства изготавливаются по традиционным рецептам без
+                использования консервантов, красителей и прочих искусственных
+                добавок. Это позволяет нам предлагать максимально чистые
+                препараты, которые не только безопасны, но и более эффективны
+                для организма, особенно при длительном применении.
+              </p>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__icon">
+              <img src="/assets/images/apteka-icon.svg" alt="icon" />
+            </div>
+            <div class="advantages__text-box">
+              <h3 class="advantages__subtitle">
+                Индивидуальный подход к лечению
+              </h3>
+              <p class="advantages__text">
+                Одним из наших ключевых преимуществ является возможность
+                изготовления лекарств по индивидуальным рецептам врачей. Это
+                особенно важно, когда стандартные заводские препараты не могут
+                полностью удовлетворить потребности пациента. Мы создаем
+                уникальные лекарственные формы, которые точно соответствуют
+                требованиям вашего лечения.
+              </p>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__icon">
+              <img src="/assets/images/apteka-icon.svg" alt="icon" />
+            </div>
+            <div class="advantages__text-box">
+              <h3 class="advantages__subtitle">
+                Высокая эффективность, проверенная временем
+              </h3>
+              <p class="advantages__text">
+                Все наши препараты изготавливаются по проверенным временем
+                рецептам, которые доказали свою эффективность. Наша команда
+                фармацевтов с большим опытом работы следит за тем, чтобы каждая
+                партия лекарства соответствовала самым высоким стандартам
+                качества.
+              </p>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__icon">
+              <img src="/assets/images/apteka-icon.svg" alt="icon" />
+            </div>
+            <div class="advantages__text-box">
+              <h3 class="advantages__subtitle">
+                Контроль качества на всех этапах производства
+              </h3>
+              <p class="advantages__text">
+                За каждым этапом производства тщательно следят наши
+                провизоры-аналитики. Это обеспечивает надежность и безопасность
+                каждой лекарственной формы. Мы уделяем внимание каждой детали,
+                чтобы вы могли быть уверены в высоком качестве наших препаратов.
+              </p>
         <div class="advantages__wrapper">
           <h2 class="advantages__title">Преимущества</h2>
           <div class="advantages__box">
@@ -206,8 +302,14 @@
                 персональных данных
               </div>
             </div>
-            <div>
-              <button type="submit">Отправить</button>
+            <div class="form__user-item">
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Телефон"
+                required
+              />
             </div>
           </form>
           <div class="form__contacts">
@@ -234,6 +336,34 @@
                 /></a>
               </button>
             </div>
+          </div>
+          <div>
+            <button type="submit">Отправить</button>
+          </div>
+        </form>
+        <div class="form__contacts">
+          <div class="form__contacts-text">...или связаться с нами:</div>
+          <div class="form__contacts-box">
+            <button class="form__contacts-button">
+              <a href="tel:+78003005853">
+                <div class="form__contacts-img">
+                  <img src="/assets/images/phone.svg" alt="phone" />
+                </div>
+                8 (800) 300-58-53</a
+              >
+            </button>
+          </div>
+          <div class="form__social">
+            <button class="form__social-button">
+              <a href="https://t.me/novfarm53" target="_blank"
+                ><img src="/assets/images/tg.svg" alt="tg"
+              /></a>
+            </button>
+            <button class="form__social-button">
+              <a href="https://vk.com/novfarm" target="_blank"
+                ><img src="/assets/images/vk.svg" alt="vk"
+              /></a>
+            </button>
           </div>
         </div>
       </section>
@@ -273,13 +403,20 @@
                 href="http://2gis.ru/v_novgorod/profiles/10837314884379875,10837314884346325,10837314884346323,70000001090465340,70000001090695580,70000001052310412,70000001007424643,10837314884346319,10837314884346320,10837314884350724,10837314884346321,70000001007424624,70000001090461601/center/31.26746746944264,58.53792832171257/zoom/12?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap"
                 >Посмотреть на карте Великого Новгорода</a
               >
-              <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+              <script
+                charset="utf-8"
+                src="https://widgets.2gis.com/js/DGWidgetLoader.js"
+              ></script>
               <script charset="utf-8">
                 new DGWidgetLoader({
                   width: 787,
                   height: 489,
                   borderColor: "#a3a3a3",
-                  pos: { lat: 58.53792832171257, lon: 31.26746746944264, zoom: 12 },
+                  pos: {
+                    lat: 58.53792832171257,
+                    lon: 31.26746746944264,
+                    zoom: 12,
+                  },
                   opt: { city: "v_novgorod" },
                   org: [
                     { id: "10837314884379875" },
@@ -752,11 +889,15 @@
             </div>
           </div>
         </div>
-        <!-- конец контейнера -->
       </section>
       <!--Шестой экран. Конец-->
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__content">© Новгородфармация | 2024</p>
+        <p class="footer__content">Сделано IT-Girls School</p>
+      </div>
+    </footer>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main-script.js"></script>
