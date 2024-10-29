@@ -197,23 +197,27 @@ textarea
   text-align: start
 
 .addresses
-    max-width: 1920px 
-    min-height: 716px
-    padding-left: 163px 
-    margin: 100px auto 160px
-    
+    margin-top: 60px
+    margin-bottom: 159px
+
+    &__wrapper
+      max-width: 1663px
+      /* margin: 0 auto */
+
     &__title
-        font-size: 32px
+        font-size: 2rem
         margin-bottom: 62px
+        padding-left: 8.542vw 
     &__buttons
         display: flex 
         gap: 24px
+        padding-left: 8.542vw 
         margin-bottom: 62px
         max-width: 918px
         
     &__button
         background-color: #67A13C
-        font-size: 24px
+        font-size: 1.5rem
         font-family: "Fira Sans"
         color: white
         border: none
@@ -234,17 +238,14 @@ textarea
         background-color: #F47F19
 
     &__container
-        width: 1756px
-        min-height: 716px
         position: relative
 
     &__maps
         position: absolute
         display: flex
-        justify-content: flex-start 
-        /* justify-content: center */
-        
-        gap: 113px 
+        justify-content: flex-start
+        gap: 113px
+        padding-left: 8.542vw 
         opacity: 0
         visibility: hidden
         transition: opacity 0.3s ease, visibility 0.3s ease
@@ -256,43 +257,43 @@ textarea
         max-width: 787px
         min-height: 489px
         overflow: hidden
-        
+
+        iframe
+          width: 787px
 .carousel-wrapper
-    /* max-width: 621px */ 
-    /* margin: 0 auto */ 
     position: relative // Для позиционирования стрелок
     font-family: "Fira Sans"
     display: flex
-    
+    justify-content: center
 // Стили для элементов карусели
 .owl-carousel
     position: relative
     max-width: 620px
-    justify-content: center
+    
     .item
         display: flex
         flex-direction: column // Колонки друг под другом
         max-width: 300px
-        flex: 1 1 300px
         gap: 20px
         margin-right: 20px
         &:last-child
             margin-right: 0
         
     .card
-        
-        height: 152px 
+        display: flex
+        flex-direction: column
+        width: 100% 
+        align-items: stretch
+        height: 152px
         border: 1px solid $accent-color 
         border-radius: 10px
         padding: 15px
-        /* padding-left: 10px */
-        /* padding-top:15px */
         background-color: white
     .name
-        font-size: 24px
+        font-size: 1.5rem
         margin-bottom: 20px
     .address
-        font-size: 18px
+        font-size: 1.125rem
         margin-bottom: 15px
         span
             font-size: 20px
@@ -311,29 +312,41 @@ textarea
         cursor: pointer
         z-index: 10
 
-        span
-            color: $accent-color
-            font-size: 48px
-            /* display: none */
-        
     .owl-prev
         position: absolute 
-        left: -35px // Располагаем слева от карусели
+        left: -55px // Располагаем слева от карусели
         width:48px
-        /* height:48px */
-        
-        
+
     .owl-next
         position: absolute
-        width:48px
-        /* height:48px */
-        right: -35px // Располагаем справа от карусели
+        right: -55px // Располагаем справа от карусели
+        width: 48px
         
         
 .owl-dots
     display: flex
 
 //Медиазапросы
+@media screen and (max-width: 1670px)
+  .addresses__maps
+    gap: 80px
+    /* padding-left: 80px */
+  .addresses__map
+    
+    iframe
+      max-width: 700px
+
+  .owl-carousel
+    width: 580px
+    .item
+      width: 280px
+    .name
+      font-size: 1.375rem 
+      margin-bottom: 10px
+    .address
+      font-size: 1.125rem
+      margin-bottom: 10px
+
 @media screen and (max-width: 1399px)
   .advantages
     &__item
@@ -345,22 +358,26 @@ textarea
     &__contacts-img
       left: 1.198vw
 
-  .addresses
-    padding-left: 30px
   .addresses__maps
-      gap: 50px
+      gap: 70px
   .addresses__map
-      width: 640px 
-      height: 100%
+      /* width: 520px  */
+      /* height: 100%  */ 
+      iframe
+        width: 520px
+
   .owl-carousel
-      .item
-            gap: 15px
-      .card
-          width: 260px
-          font-size: 22px
-          .name
-              font-size: 22px
-              margin-bottom: 15px
+    width: 460px
+    .item
+      width: 220px
+      gap: 15px
+    .card
+      padding: 12px
+    .name
+      font-size: 1.125rem
+      margin-bottom: 8px
+    .address
+      font-size: 16px
 
 @media screen and (max-width: 1199px)
   .advantages
@@ -369,41 +386,37 @@ textarea
     &__item
       flex-direction: row
 
-  .addresses
-      padding-left: 30px
+  .addresses__buttons
+      gap: 15px
+
+  .addresses__button
+      font-size: 20px
+  .addresses__maps
+      flex-direction: column
+      gap: 60px
   .addresses__map
-        width: 580px 
-        height: 100%
-        overflow: hidden
-      
+    iframe
+      width: 787px
+
   .owl-carousel
+      width: 580px
       .item
-          gap: 15px
-      .card
-          width: 240px
+        width: 280px
+      .name
+        font-size: 1.375rem
+        margin-bottom: 10px
+      .address
+        font-size: 18px
+        margin-bottom: 10px
 
 @media screen and (max-width: 991px)
   form
     flex-direction: column
 
-  .addresses
-      padding-left: 100px
+  .addresses__title
+    margin-bottom: 35px
   .addresses__buttons
-      gap: 15px
-        
-  .addresses__button
-      font-size: 20px
-  .addresses__maps
-      flex-direction: column
-      gap: 50px
-  .addresses__map
-      width: 787px
-      min-height: 489px 
-  .owl-carousel
-      .item
-          gap: 20px
-      .card
-        width: 300px
+    margin-bottom: 40px
 
 @media screen and (max-width: 767px)
   .advantages
@@ -412,19 +425,24 @@ textarea
       padding: 30px 15px
       gap: 15px
 
-  .addresses 
-    padding-left: 60px
   .addresses__title
     margin-bottom: 30px
   .addresses__map
-    width: 580px
-    /* min-height: 489px */
-    /* overflow: hidden */
+    iframe
+      width: 550px
+
   .owl-carousel
-    width: 300px
-  .carousel__wrapper
-    width: 300px
-    overflow: hidden
+    width: 460px
+    .item
+      width: 220px
+      gap: 15px
+    .card
+      padding: 12px
+      .name
+        font-size: 1.125rem
+        margin-bottom: 8px
+      .address
+        font-size: 16px
 
 @media screen and (max-width: 575px)
   button
@@ -438,15 +456,14 @@ textarea
 
 
   .addresses__map
-      max-width: 500px
-
-  .owl-carousel
-      width: 300px
-      .card
-          width: 300px
-          .name
-              font-size: 20px
-              margin-bottom: 10px
+    iframe
+      width: 390px
+  .addresses__buttons
+    flex-direction: column
 
   .carousel-wrapper
     width: 300px
+  .owl-carousel
+    width: 300px
+    .item
+      width: 300px

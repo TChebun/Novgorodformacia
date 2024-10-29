@@ -123,343 +123,348 @@
 
       <!--Шестой экран. Начало-->
       <section class="addresses">
-        <h2 class="addresses__title">Наши аптеки</h2>
-        <div class="addresses__buttons">
-          <button class="addresses__button active" data-region="velikiy-novgorod">Великий Новгород</button>
-          <button class="addresses__button" data-region="novgorodskaya-oblast">Новгородская область</button>
-          <button class="addresses__button" data-region="leningradskaya-oblast">Ленинградская область</button>
-        </div>
-  
-        <div class="addresses__container">
-        <!-- Великий Новгород -->
-          <div class="addresses__maps active" id= "velikiy-novgorod">
-          <div class="addresses__map">
-            <a
-              class="dg-widget-link"
-              href="http://2gis.ru/v_novgorod/profiles/10837314884379875,10837314884346325,10837314884346323,70000001090465340,70000001090695580,70000001052310412,70000001007424643,10837314884346319,10837314884346320,10837314884350724,10837314884346321,70000001007424624,70000001090461601/center/31.26746746944264,58.53792832171257/zoom/12?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap"
-              >Посмотреть на карте Великого Новгорода</a
-            >
-            <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
-            <script charset="utf-8">
-              new DGWidgetLoader({
-                width: 787,
-                height: 489,
-                borderColor: "#a3a3a3",
-                pos: { lat: 58.53792832171257, lon: 31.26746746944264, zoom: 12 },
-                opt: { city: "v_novgorod" },
-                org: [
-                  { id: "10837314884379875" },
-                  { id: "10837314884346325" },
-                  { id: "10837314884346323" },
-                  { id: "70000001090465340" },
-                  { id: "70000001090695580" },
-                  { id: "70000001052310412" },
-                  { id: "70000001007424643" },
-                  { id: "10837314884346319" },
-                  { id: "10837314884346320" },
-                  { id: "10837314884350724" },
-                  { id: "10837314884346321" },
-                  { id: "70000001007424624" },
-                  { id: "70000001090461601" },
-                ],
-              });
-            </script>
-            <noscript style="color: #c00; font-size: 16px; font-weight: bold"
-              >Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript
-            >
-            <!-- карта Яндекс -->
-            <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A770c999935131dda58541eadb80741e67d11b8adfb187f05813574cd45d6c78c&amp;source=constructor" width="787" height="489" frameborder="0"></iframe> -->
+        <div class="addresses__wrapper">
+          <h2 class="addresses__title">Наши аптеки</h2>
+          <div class="addresses__buttons">
+            <button class="addresses__button active" data-region="velikiy-novgorod">Великий Новгород</button>
+            <button class="addresses__button" data-region="novgorodskaya-oblast">Новгородская область</button>
+            <button class="addresses__button" data-region="leningradskaya-oblast">Ленинградская область</button>
           </div>
-  
-          <div class="carousel-wrapper">
-            <div class="owl-carousel addresses__carousel">
-              <div class="item">
-                <div class="card">
-                  <p class="name">Аптека № 1</p>
-                  <p class="address"><span>Адрес: </span> Рабочая, д.6а</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 77-50-45</p>
+    
+          <div class="addresses__container">
+          <!-- Великий Новгород -->
+            <div class="addresses__maps active" id= "velikiy-novgorod">
+            <div class="addresses__map">
+              <!-- <a
+                class="dg-widget-link"
+                href="http://2gis.ru/v_novgorod/profiles/10837314884379875,10837314884346325,10837314884346323,70000001090465340,70000001090695580,70000001052310412,70000001007424643,10837314884346319,10837314884346320,10837314884350724,10837314884346321,70000001007424624,70000001090461601/center/31.26746746944264,58.53792832171257/zoom/12?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap"
+                >Посмотреть на карте Великого Новгорода</a
+              >
+              <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+              <script charset="utf-8">
+                new DGWidgetLoader({
+                  width: 787,
+                  height: 489,
+                  borderColor: "#a3a3a3",
+                  pos: { lat: 58.53792832171257, lon: 31.26746746944264, zoom: 12 },
+                  opt: { city: "v_novgorod" },
+                  org: [
+                    { id: "10837314884379875" },
+                    { id: "10837314884346325" },
+                    { id: "10837314884346323" },
+                    { id: "70000001090465340" },
+                    { id: "70000001090695580" },
+                    { id: "70000001052310412" },
+                    { id: "70000001007424643" },
+                    { id: "10837314884346319" },
+                    { id: "10837314884346320" },
+                    { id: "10837314884350724" },
+                    { id: "10837314884346321" },
+                    { id: "70000001007424624" },
+                    { id: "70000001090461601" },
+                  ],
+                });
+              </script>
+              <noscript style="color: #c00; font-size: 16px; font-weight: bold"
+                >Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript
+              > -->
+              <!-- карта Яндекс -->
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A770c999935131dda58541eadb80741e67d11b8adfb187f05813574cd45d6c78c&amp;source=constructor" width="787" height="489" frameborder="0"></iframe>
+            </div>
+    
+            <div class="carousel-wrapper">
+              <div class="owl-carousel addresses__carousel.owl-carousel">
+                <div class="item">
+                  <div class="card">
+                    <p class="name">Аптека № 1</p>
+                    <p class="address"><span>Адрес: </span> Рабочая, д.6а</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 77-50-45</p>
+                  </div>
+                  <div class="card" >
+                    <p class="name">Аптека № 4</p>
+                    <p class="address"><span>Адрес: </span> ул Павла Левита, д.2</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 62-87-08</p>
+                  </div>
+                  <div class="card">
+                    <p class="name">Аптека № 5</p>
+                    <p class="address"><span>Адрес: </span> ул Козьмодемьянская, д.12</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 76-60-99</p>
+                  </div>
                 </div>
-                <div class="card" >
-                  <p class="name">Аптека № 4</p>
-                  <p class="address"><span>Адрес: </span> ул Павла Левита, д.2</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 62-87-08</p>
+                <div class="item">
+                  <div class="card">
+                    <p class="name">Аптека № 6</p>
+                    <p class="address"><span>Адрес: </span> ул Парковая, д.13</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 67-11-57</p>
+                  </div>
+                  <div class="card">
+                    <p class="name">Аптека № 7</p>
+                    <p class="address"><span>Адрес: </span> ул Ломоносова, д.25</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 67-87-05</p>
+                  </div>
+                  <div class="card">
+                    <p class="name">Аптека № 8</p>
+                    <p class="address"><span>Адрес: </span> ул. Ломоносова, д.27</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 61-73-98</p>
+                  </div>
                 </div>
-                <div class="card">
-                  <p class="name">Аптека № 5</p>
-                  <p class="address"><span>Адрес: </span> ул Козьмодемьянская, д.12</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 76-60-99</p>
+                <div class="item">
+                  <div class="card">
+                    <p class="name">Аптека № 11</p>
+                    <p class="address"><span>Адрес: </span> ул Славная, д.45/24</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 63-00-83</p>
+                  </div>
+                  <div class="card">
+                    <p class="name">Аптека № 72</p>
+                    <p class="address"><span>Адрес: </span> ул Новолучанская, д.28/1</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 77-14-97</p>
+                  </div>
+                  <div class="card">
+                    <p class="name">Аптека № 54</p>
+                    <p class="address"><span>Адрес: </span> ул Большая Санкт-Петербургская, д.14</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 77-74-63</p>
+                  </div>
                 </div>
-              </div>
-              <div class="item">
-                <div class="card">
-                  <p class="name">Аптека № 6</p>
-                  <p class="address"><span>Адрес: </span> ул Парковая, д.13</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 67-11-57</p>
-                </div>
-                <div class="card">
-                  <p class="name">Аптека № 7</p>
-                  <p class="address"><span>Адрес: </span> ул Ломоносова, д.25</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 67-87-05</p>
-                </div>
-                <div class="card">
-                  <p class="name">Аптека № 8</p>
-                  <p class="address"><span>Адрес: </span> ул. Ломоносова, д.27</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 61-73-98</p>
-                </div>
-              </div>
-              <div class="item">
-                <div class="card">
-                  <p class="name">Аптека № 11</p>
-                  <p class="address"><span>Адрес: </span> ул Славная, д.45/24</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 63-00-83</p>
-                </div>
-                <div class="card">
-                  <p class="name">Аптека № 72</p>
-                  <p class="address"><span>Адрес: </span> ул Новолучанская, д.28/1</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 77-14-97</p>
-                </div>
-                <div class="card">
-                  <p class="name">Аптека № 54</p>
-                  <p class="address"><span>Адрес: </span> ул Большая Санкт-Петербургская, д.14</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 77-74-63</p>
-                </div>
-              </div>
-              <div class="item">
-                <div class="card">
-                  <p class="name">Аптека № 80</p>
-                  <p class="address"><span>Адрес: </span> ул ул. Псковская, д.32</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 78-04-40</p>
-                </div>
-                <div class="card">
-                  <p class="name">Аптека № 72-П</p>
-                  <p class="address"><span>Адрес: </span> ул. Рабочая, д.6А</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 62-89-02</p>
-                </div>
-                <div class="card">
-                  <p class="name">Аптечный пункт № 75</p>
-                  <p class="address"><span>Адрес: </span> ул. Б.Московская, д.128/10 (Ивушки)</p>
-                  <p class="address"><span>Тел:</span> 8 (911) 635-03-03</p>
+                <div class="item">
+                  <div class="card">
+                    <p class="name">Аптека № 80</p>
+                    <p class="address"><span>Адрес: </span> ул ул. Псковская, д.32</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 78-04-40</p>
+                  </div>
+                  <div class="card">
+                    <p class="name">Аптека № 72-П</p>
+                    <p class="address"><span>Адрес: </span> ул. Рабочая, д.6А</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 62-89-02</p>
+                  </div>
+                  <div class="card">
+                    <p class="name">Аптечный пункт № 75</p>
+                    <p class="address"><span>Адрес: </span> ул. Б.Московская, д.128/10 (Ивушки)</p>
+                    <p class="address"><span>Тел:</span> 8 (911) 635-03-03</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          </div>
-  
-  
-        <!-- Новгородская область -->
-          <div class="addresses__maps novgorodskaya-oblast" id="novgorodskaya-oblast">
-          <div class="addresses__map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acdce335b8aee47fc46b0cef86a67ff562e0394d26feb8b4c97265cfc44a2e1b1&amp;source=constructor" width="787" height="489" frameborder="0"></iframe>
-          </div>
-  
-          <div class="carousel-wrapper">
-            <div class="owl-carousel addresses__carousel">
-              <!-- новгородская -->
-              <div class="item">
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 3 (Батецк)</p>
-                  <p class="address"><span>Адрес: </span> п. Батецкий, ул. Первомайская, д.47</p>
-                  <p class="address"><span>Тел:</span> 8 (816 61) 2-23-27</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 12 (Неболчи)</p>
-                  <p class="address"><span>Адрес: </span> п. Неболчи, пер. Пионерский, д.17</p>
-                  <p class="address"><span>Тел:</span> 8 (816 68) 6-53-73</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 15</p>
-                  <p class="address"><span>Адрес: </span> п. Кулотино, Советский пр., д.4</p>
-                  <p class="address"><span>Тел:</span> 8 (816 57) 2-51-52</p>
-                </div>
-              </div>
-              <!-- область1 -->
-              <!-- область 2 -->
-              <div class="item">
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 17 (Холм)</p>
-                  <p class="address"><span>Адрес: </span> ул. Октябрьская, д.81</p>
-                  <p class="address"><span>Тел:</span> 8 (816 54) 5-12-39 / 8 (816 54) 5-24-35</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 20 (Хвойная)</p>
-                  <p class="address"><span>Адрес: </span> ул. Пионерская, д.10</p>
-                  <p class="address"><span>Тел:</span> 8 (816 67) 5-09-14</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 21 (Юбилейный)</p>
-                  <p class="address"><span>Адрес: </span> ул. Сосновая, д.3</p>
-                  <p class="address"><span>Тел:</span> 8 (816 67) 5-43-85</p>
-                </div>
-              </div>
-              <!-- область2 -->
-              <!-- область 3 -->
-              <div class="item">
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 28</p>
-                  <p class="address"><span>Адрес: </span> п. Пролетарий, ул. Октябрьская, д.2</p>
-                  <p class="address"><span>Тел:</span> 8 (816 2) 74-50-67</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 33 (Парфино)</p>
-                  <p class="address"><span>Адрес: </span> ул. Мира, д.16</p>
-                  <p class="address"><span>Тел:</span> 8 (816 50) 6-14-96</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 34 (Окуловка)</p>
-                  <p class="address"><span>Адрес: </span> ул. Стрельцова, д.9а</p>
-                  <p class="address"><span>Тел:</span> 8 (816 57) 2-37-18 / 8 (816 57) 2-46-66</p>
-                </div>
-              </div>
-              <!-- область3 -->
-              <!-- область4 -->
-              <div class="item">
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 35 (Пестово)</p>
-                  <p class="address"><span>Адрес: </span> ул. Вокзальная, д.4</p>
-                  <p class="address"><span>Тел:</span> 8 (816 69) 5-68-08</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 36 (Поддорье)</p>
-                  <p class="address"><span>Адрес: </span> ул. Октябрьская, д.7</p>
-                  <p class="address"><span>Тел:</span> 8 (816 58) 7-12-39</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 40 (Старая Русса)</p>
-                  <p class="address"><span>Адрес: </span> ул. Санкт-Петербургская, д.3</p>
-                  <p class="address"><span>Тел:</span> 8 (816 52) 5-18-11 / 8 (816 52) 5-27-93</p>
-                </div>
-              </div>
-              <!-- область4 -->
-              <!-- область5 -->
-              <div class="item">
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 43 (Угловка)</p>
-                  <p class="address"><span>Адрес: </span> п. Угловка, ул. Центральная, д.19</p>
-                  <p class="address"><span>Тел:</span> 8 (816 57) 2-65-21</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 45 (Хвойная)</p>
-                  <p class="address"><span>Адрес: </span> ул. Печатников, д.15Б</p>
-                  <p class="address"><span>Тел:</span> 8 (816 67) 50-291</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 53 (Окуловка)</p>
-                  <p class="address"><span>Адрес: </span> п. Боровенка, ул. Кооперативная, д.18</p>
-                  <p class="address"><span>Тел:</span> 8 (816 57) 4-31-36</p>
-                </div>
-              </div>
-              <!-- область5 -->
-              <!-- область6 -->
-              <div class="item">
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 56 (Боровичи)</p>
-                  <p class="address"><span>Адрес: </span> проезд Гагарина, д.11</p>
-                  <p class="address"><span>Тел:</span> 8 (816 64) 4-26-42</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 64 (Мошенское)</p>
-                  <p class="address"><span>Адрес: </span> ул. Советская, д.12</p>
-                  <p class="address"><span>Тел:</span> 8 (816 53) 61-191</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 67 (Чудово)</p>
-                  <p class="address"><span>Адрес: </span> ул. Некрасова, д.11</p>
-                  <p class="address"><span>Тел:</span> 8 (816 65) 5-44-34</p>
-                </div>
-              </div>
-              <!-- область6 -->
-              <!-- область7 -->
-              <div class="item">
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 70 (Малая Вишера)</p>
-                  <p class="address"><span>Адрес: </span> ул. Московская, д.22</p>
-                  <p class="address"><span>Тел:</span> 8 (816 60) 39-449</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 71 (Демянск)</p>
-                  <p class="address"><span>Адрес: </span> ул. Ленина, д.19</p>
-                  <p class="address"><span>Тел:</span> 8 (816 51) 44-017</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">А/п №73 (Сольцы – 2)</p>
-                  <p class="address"><span>Адрес: </span> г. Сольцы – 2, ДОС д.165</p>
-                  <p class="address"><span>Тел:</span> 8 (816 55) 2-62-23</p>
-                </div>
-              </div>
-              <!-- область7 -->
-              <!-- область 8 -->
-              <div class="item">
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 74 (Валдай)</p>
-                  <p class="address"><span>Адрес: </span> ул. Механизаторов 2В</p>
-                  <p class="address"><span>Тел:</span> 8 (816 66) 2-52-08</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">А/п №78 (Волот)</p>
-                  <p class="address"><span>Адрес: </span> ул. Комсомольская, д.21</p>
-                  <p class="address"><span>Тел:</span> 8 (816 62) 6-12-53</p>
-                </div>
-                <div class="card" data-location="">
-                  <p class="name">А/п №76 (Трубичино)</p>
-                  <p class="address"><span>Адрес: </span> здание 35А</p>
-                  <p class="address"><span>Тел:</span> 8 (911) 612-03-03</p>
-                </div>
-              </div>
-              <!-- область8 -->
-              
             </div>
-          </div>
-          </div>
-  
-        <!-- Ленинградская -->
-          <div class="addresses__maps leningradskaya-oblast" id="leningradskaya-oblast">
-          <div class="addresses__map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1e636d729cd6336ceb29facbcb226fbbd763ee010bac5b6844b776cc92a3fd9d&amp;source=constructor" width="787" height="489" frameborder="0"></iframe>
-          </div>
-  
-          <div class="carousel-wrapper">
-            <div class="owl-carousel addresses__carousel">
-              <div class="item">
-                <div class="card" data-location="">
-                  <p class="name">Аптека № 59 (Тоснино)</p>
-                  <p class="address"><span>Адрес: </span> ул. Вокзальная, д.16</p>
-                  <p class="address"><span>Тел:</span> 8 (813 61) 2 – 67 – 77</p>
-                </div>
-                <!-- <div class="card" data-location="">
-                  <p class="name"> </p>
-                  <p class="address"><span>Адрес: </span> </p>
-                  <p class="address"><span>Тел:</span> </p>
-                </div> -->
-                <!-- <div class="card" data-location="">
-                  <p class="name">Аптека № 15</p>
-                  <p class="address"><span>Адрес: </span> </p>
-                  <p class="address"><span>Тел:</span> 2</p>
-                </div> -->
-              </div>
-              
-              <div class="item">
-                <div class="card" data-location="">
-                  <p class="name"></p>
-                  <p class="address"><span> </span>  </p>
-                  <p class="address"><span></span> </p>
-                </div>
-                <!-- <div class="card" data-location="">
-                  <p class="name">Аптека № 20 </p>
-                  <p class="address"><span>Адрес: </span> </p>
-                  <p class="address"><span>Тел:</span> </p>
-                </div> -->
-                <!-- <div class="card" data-location="">
-                  <p class="name">Аптека № 21 (Юбилейный)</p>
-                  <p class="address"><span>Адрес: </span> </p>
-                  <p class="address"><span>Тел:</span> </p>
-                </div> -->
-              </div>
-              
-              
+    
+    
+          <!-- Новгородская область -->
+            <div class="addresses__maps novgorodskaya-oblast" id="novgorodskaya-oblast">
+            <div class="addresses__map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acdce335b8aee47fc46b0cef86a67ff562e0394d26feb8b4c97265cfc44a2e1b1&amp;source=constructor" width="100%" height="489" frameborder="0"></iframe>
             </div>
+    
+            <div class="carousel-wrapper">
+              <div class="owl-carousel addresses__carousel">
+                <!-- новгородская -->
+                <div class="item">
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 3</p>
+                    <p class="address"><span>Адрес: </span> п. Батецкий, ул. Первомайская, д.47</p>
+                    <p class="address"><span>Тел:</span> 8 (816 61) 2-23-27</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 12</p>
+                    <p class="address"><span>Адрес: </span> п. Неболчи, пер. Пионерский, д.17</p>
+                    <p class="address"><span>Тел:</span> 8 (816 68) 6-53-73</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 15</p>
+                    <p class="address"><span>Адрес: </span> п. Кулотино, Советский пр., д.4</p>
+                    <p class="address"><span>Тел:</span> 8 (816 57) 2-51-52</p>
+                  </div>
+                </div>
+                <!-- область1 -->
+                <!-- область 2 -->
+                <div class="item">
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 17</p>
+                    <p class="address"><span>Адрес: </span> Холм, ул. Октябрьская, д.81</p>
+                    <p class="address"><span>Тел:</span> 8 (816 54) 5-12-39 </p>
+                    <p class="address">8 (816 54) 5-24-35</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 20</p>
+                    <p class="address"><span>Адрес: </span> Хвойная ул. Пионерская, д.10</p>
+                    <p class="address"><span>Тел:</span> 8 (816 67) 5-09-14</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 21</p>
+                    <p class="address"><span>Адрес: </span> Юбилейный ул. Сосновая, д.3</p>
+                    <p class="address"><span>Тел:</span> 8 (816 67) 5-43-85</p>
+                  </div>
+                </div>
+                <!-- область2 -->
+                <!-- область 3 -->
+                <div class="item">
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 28</p>
+                    <p class="address"><span>Адрес: </span> п. Пролетарий, ул. Октябрьская, д.2</p>
+                    <p class="address"><span>Тел:</span> 8 (816 2) 74-50-67</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 33</p>
+                    <p class="address"><span>Адрес: </span> Парфино ул. Мира, д.16</p>
+                    <p class="address"><span>Тел:</span> 8 (816 50) 6-14-96</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 34</p>
+                    <p class="address"><span>Адрес: </span> Окуловка ул. Стрельцова, д.9а</p>
+                    <p class="address"><span>Тел:</span> 8 (816 57) 2-37-18 </p>
+                    <p class="address">8 (816 57) 2-46-66</p>
+                  </div>
+                </div>
+                <!-- область3 -->
+                <!-- область4 -->
+                <div class="item">
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 35</p>
+                    <p class="address"><span>Адрес: </span> Пестово ул. Вокзальная, д.4</p>
+                    <p class="address"><span>Тел:</span> 8 (816 69) 5-68-08</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 36</p>
+                    <p class="address"><span>Адрес: </span> Поддорье ул. Октябрьская, д.7</p>
+                    <p class="address"><span>Тел:</span> 8 (816 58) 7-12-39</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 40</p>
+                    <p class="address"><span>Адрес: </span> Старая Русса ул. Санкт-Петербургская, д.3</p>
+                    <p class="address"><span>Тел:</span> 8 (816 52) 5-18-11 </p>
+                    <p class="address">8 (816 52) 5-27-93</p>
+                  </div>
+                </div>
+                <!-- область4 -->
+                <!-- область5 -->
+                <div class="item">
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 43</p>
+                    <p class="address"><span>Адрес: </span> п. Угловка, ул. Центральная, д.19</p>
+                    <p class="address"><span>Тел:</span> 8 (816 57) 2-65-21</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 45</p>
+                    <p class="address"><span>Адрес: </span> Хвойная ул. Печатников, д.15Б</p>
+                    <p class="address"><span>Тел:</span> 8 (816 67) 50-291</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 53</p>
+                    <p class="address"><span>Адрес: </span> п. Боровенка, ул. Кооперативная, д.18</p>
+                    <p class="address"><span>Тел:</span> 8 (816 57) 4-31-36</p>
+                  </div>
+                </div>
+                <!-- область5 -->
+                <!-- область6 -->
+                <div class="item">
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 56</p>
+                    <p class="address"><span>Адрес: </span> Боровичи пр-зд Гагарина, д.11</p>
+                    <p class="address"><span>Тел:</span> 8 (816 64) 4-26-42</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 64</p>
+                    <p class="address"><span>Адрес: </span> Мошенское ул. Советская, д.12</p>
+                    <p class="address"><span>Тел:</span> 8 (816 53) 61-191</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 67</p>
+                    <p class="address"><span>Адрес: </span> Чудово ул. Некрасова, д.11</p>
+                    <p class="address"><span>Тел:</span> 8 (816 65) 5-44-34</p>
+                  </div>
+                </div>
+                <!-- область6 -->
+                <!-- область7 -->
+                <div class="item">
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 70</p>
+                    <p class="address"><span>Адрес: </span> Малая Вишера ул. Московская, д.22</p>
+                    <p class="address"><span>Тел:</span> 8 (816 60) 39-449</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 71</p>
+                    <p class="address"><span>Адрес: </span> Демянск ул. Ленина, д.19</p>
+                    <p class="address"><span>Тел:</span> 8 (816 51) 44-017</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">А/п №73</p>
+                    <p class="address"><span>Адрес: </span> г. Сольцы – 2, ДОС д.165</p>
+                    <p class="address"><span>Тел:</span> 8 (816 55) 2-62-23</p>
+                  </div>
+                </div>
+                <!-- область7 -->
+                <!-- область 8 -->
+                <div class="item">
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 74</p>
+                    <p class="address"><span>Адрес: </span> Валдай ул. Механизаторов 2В</p>
+                    <p class="address"><span>Тел:</span> 8 (816 66) 2-52-08</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">А/п №78</p>
+                    <p class="address"><span>Адрес: </span> Волот ул. Комсомольская, д.21</p>
+                    <p class="address"><span>Тел:</span> 8 (816 62) 6-12-53</p>
+                  </div>
+                  <div class="card" data-location="">
+                    <p class="name">А/п №76</p>
+                    <p class="address"><span>Адрес: </span> Трубичино здание 35А</p>
+                    <p class="address"><span>Тел:</span> 8 (911) 612-03-03</p>
+                  </div>
+                </div>
+                <!-- область8 -->
+                
+              </div>
+            </div>
+            </div>
+    
+          <!-- Ленинградская -->
+            <div class="addresses__maps leningradskaya-oblast" id="leningradskaya-oblast">
+            <div class="addresses__map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1e636d729cd6336ceb29facbcb226fbbd763ee010bac5b6844b776cc92a3fd9d&amp;source=constructor" width="100%" height="489" frameborder="0"></iframe>
+            </div>
+    
+            <div class="carousel-wrapper">
+              <div class="owl-carousel addresses__carousel">
+                <div class="item">
+                  <div class="card" data-location="">
+                    <p class="name">Аптека № 59 (Тоснино)</p>
+                    <p class="address"><span>Адрес: </span> ул. Вокзальная, д.16</p>
+                    <p class="address"><span>Тел:</span> 8 (813 61) 2 – 67 – 77</p>
+                  </div>
+                  <!-- <div class="card" data-location="">
+                    <p class="name"> </p>
+                    <p class="address"><span>Адрес: </span> </p>
+                    <p class="address"><span>Тел:</span> </p>
+                  </div> -->
+                  <!-- <div class="card" data-location="">
+                    <p class="name">Аптека № 15</p>
+                    <p class="address"><span>Адрес: </span> </p>
+                    <p class="address"><span>Тел:</span> 2</p>
+                  </div> -->
+                </div>
+                
+                <div class="item">
+                  <div class="card" data-location="">
+                    <p class="name"></p>
+                    <p class="address"><span> </span>  </p>
+                    <p class="address"><span></span> </p>
+                  </div>
+                  <!-- <div class="card" data-location="">
+                    <p class="name">Аптека № 20 </p>
+                    <p class="address"><span>Адрес: </span> </p>
+                    <p class="address"><span>Тел:</span> </p>
+                  </div> -->
+                  <!-- <div class="card" data-location="">
+                    <p class="name">Аптека № 21 (Юбилейный)</p>
+                    <p class="address"><span>Адрес: </span> </p>
+                    <p class="address"><span>Тел:</span> </p>
+                  </div> -->
+                </div>
+                
+                
+              </div>
+            </div>
+            </div> 
           </div>
-          </div> 
-        </div>
+        </div><!-- конец контейнера -->
       </section>
       <!--Шестой экран. Конец-->
     </main>

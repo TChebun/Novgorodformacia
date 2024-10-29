@@ -247,24 +247,28 @@ textarea::-webkit-resizer {
 }
 
 .addresses {
-  max-width: 1920px;
-  min-height: 716px;
-  padding-left: 163px;
-  margin: 100px auto 160px;
+  margin-top: 60px;
+  margin-bottom: 159px;
+}
+.addresses__wrapper {
+  max-width: 1663px;
+  /* margin: 0 auto */
 }
 .addresses__title {
-  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 62px;
+  padding-left: 8.542vw;
 }
 .addresses__buttons {
   display: flex;
   gap: 24px;
+  padding-left: 8.542vw;
   margin-bottom: 62px;
   max-width: 918px;
 }
 .addresses__button {
   background-color: #67A13C;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Fira Sans";
   color: white;
   border: none;
@@ -286,16 +290,14 @@ textarea::-webkit-resizer {
   background-color: #F47F19;
 }
 .addresses__container {
-  width: 1756px;
-  min-height: 716px;
   position: relative;
 }
 .addresses__maps {
   position: absolute;
   display: flex;
   justify-content: flex-start;
-  /* justify-content: center */
   gap: 113px;
+  padding-left: 8.542vw;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -309,25 +311,25 @@ textarea::-webkit-resizer {
   min-height: 489px;
   overflow: hidden;
 }
+.addresses__map iframe {
+  width: 787px;
+}
 
 .carousel-wrapper {
-  /* max-width: 621px */ 
-  /* margin: 0 auto */ 
   position: relative;
   font-family: "Fira Sans";
   display: flex;
+  justify-content: center;
 }
 
 .owl-carousel {
   position: relative;
   max-width: 620px;
-  justify-content: center;
 }
 .owl-carousel .item {
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  flex: 1 1 300px;
   gap: 20px;
   margin-right: 20px;
 }
@@ -335,20 +337,22 @@ textarea::-webkit-resizer {
   margin-right: 0;
 }
 .owl-carousel .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: stretch;
   height: 152px;
   border: 1px solid #F47F19;
   border-radius: 10px;
   padding: 15px;
-  /* padding-left: 10px */
-  /* padding-top:15px */
   background-color: white;
 }
 .owl-carousel .name {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 .owl-carousel .address {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 15px;
 }
 .owl-carousel .address span {
@@ -370,28 +374,44 @@ textarea::-webkit-resizer {
   cursor: pointer;
   z-index: 10;
 }
-.owl-nav .owl-prev span, .owl-nav .owl-next span {
-  color: #F47F19;
-  font-size: 48px;
-  /* display: none */
-}
 .owl-nav .owl-prev {
   position: absolute;
-  left: -35px;
+  left: -55px;
   width: 48px;
-  /* height:48px */
 }
 .owl-nav .owl-next {
   position: absolute;
+  right: -55px;
   width: 48px;
-  /* height:48px */
-  right: -35px;
 }
 
 .owl-dots {
   display: flex;
 }
 
+@media screen and (max-width: 1670px) {
+  .addresses__maps {
+    gap: 80px;
+    /* padding-left: 80px */
+  }
+  .addresses__map iframe {
+    max-width: 700px;
+  }
+  .owl-carousel {
+    width: 580px;
+  }
+  .owl-carousel .item {
+    width: 280px;
+  }
+  .owl-carousel .name {
+    font-size: 1.375rem;
+    margin-bottom: 10px;
+  }
+  .owl-carousel .address {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+  }
+}
 @media screen and (max-width: 1399px) {
   .advantages__item {
     flex-direction: column;
@@ -403,26 +423,32 @@ textarea::-webkit-resizer {
   .form__contacts-img {
     left: 1.198vw;
   }
-  .addresses {
-    padding-left: 30px;
-  }
   .addresses__maps {
-    gap: 50px;
+    gap: 70px;
   }
   .addresses__map {
-    width: 640px;
-    height: 100%;
+    /* width: 520px  */
+    /* height: 100%  */ 
+  }
+  .addresses__map iframe {
+    width: 520px;
+  }
+  .owl-carousel {
+    width: 460px;
   }
   .owl-carousel .item {
+    width: 220px;
     gap: 15px;
   }
   .owl-carousel .card {
-    width: 260px;
-    font-size: 22px;
+    padding: 12px;
   }
-  .owl-carousel .card .name {
-    font-size: 22px;
-    margin-bottom: 15px;
+  .owl-carousel .name {
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+  }
+  .owl-carousel .address {
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -432,28 +458,6 @@ textarea::-webkit-resizer {
   .advantages__item {
     flex-direction: row;
   }
-  .addresses {
-    padding-left: 30px;
-  }
-  .addresses__map {
-    width: 580px;
-    height: 100%;
-    overflow: hidden;
-  }
-  .owl-carousel .item {
-    gap: 15px;
-  }
-  .owl-carousel .card {
-    width: 240px;
-  }
-}
-@media screen and (max-width: 991px) {
-  form {
-    flex-direction: column;
-  }
-  .addresses {
-    padding-left: 100px;
-  }
   .addresses__buttons {
     gap: 15px;
   }
@@ -462,17 +466,35 @@ textarea::-webkit-resizer {
   }
   .addresses__maps {
     flex-direction: column;
-    gap: 50px;
+    gap: 60px;
   }
-  .addresses__map {
+  .addresses__map iframe {
     width: 787px;
-    min-height: 489px;
+  }
+  .owl-carousel {
+    width: 580px;
   }
   .owl-carousel .item {
-    gap: 20px;
+    width: 280px;
   }
-  .owl-carousel .card {
-    width: 300px;
+  .owl-carousel .name {
+    font-size: 1.375rem;
+    margin-bottom: 10px;
+  }
+  .owl-carousel .address {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 991px) {
+  form {
+    flex-direction: column;
+  }
+  .addresses__title {
+    margin-bottom: 35px;
+  }
+  .addresses__buttons {
+    margin-bottom: 40px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -481,23 +503,28 @@ textarea::-webkit-resizer {
     padding: 30px 15px;
     gap: 15px;
   }
-  .addresses {
-    padding-left: 60px;
-  }
   .addresses__title {
     margin-bottom: 30px;
   }
-  .addresses__map {
-    width: 580px;
-    /* min-height: 489px */
-    /* overflow: hidden */
+  .addresses__map iframe {
+    width: 550px;
   }
   .owl-carousel {
-    width: 300px;
+    width: 460px;
   }
-  .carousel__wrapper {
-    width: 300px;
-    overflow: hidden;
+  .owl-carousel .item {
+    width: 220px;
+    gap: 15px;
+  }
+  .owl-carousel .card {
+    padding: 12px;
+  }
+  .owl-carousel .card .name {
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+  }
+  .owl-carousel .card .address {
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -511,20 +538,19 @@ textarea::-webkit-resizer {
   .form__contacts-img {
     display: none;
   }
-  .addresses__map {
-    max-width: 500px;
+  .addresses__map iframe {
+    width: 390px;
+  }
+  .addresses__buttons {
+    flex-direction: column;
+  }
+  .carousel-wrapper {
+    width: 300px;
   }
   .owl-carousel {
     width: 300px;
   }
-  .owl-carousel .card {
-    width: 300px;
-  }
-  .owl-carousel .card .name {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  .carousel-wrapper {
+  .owl-carousel .item {
     width: 300px;
   }
 }
