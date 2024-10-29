@@ -514,3 +514,174 @@ textarea
   width: 25%
   line-height: 100px
   color: #FFFFFF
+//Первый и второй экран база
+$primary-color: #1d3110
+$font-hero-title: 700 60px Mulish, sans-serif
+$font-hero-description: 400 20px Fira Sans, sans-serif
+$font-about-title: 600 32px Mulish, sans-serif
+$font-text-content: 400 16px Fira Sans, sans-serif
+
+//Первый и второй экран миксин
+@mixin visually-hidden 
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0, 0, 0, 0)
+  border: 0
+
+//Первый и второй экран
+.hero-section 
+  z-index: 10
+  display: flex
+  width: 100%
+  flex-direction: column
+  color: $primary-color
+  justify-content: center
+  padding: 1px 0
+  min-height: 1039px
+
+
+.visually-hidden 
+  @include visually-hidden
+
+
+.hero-content-wrapper 
+  display: flex
+  flex-direction: column
+  position: relative
+  min-height: 1038px
+  width: 100%
+  align-items: start
+  justify-content: center
+  padding: 406px 80px
+
+
+.hero-background 
+  position: absolute
+  inset: 0
+  height: 100%
+  width: 100%
+  object-fit: cover
+  object-position: center
+
+
+.hero-text-container 
+  position: relative
+  display: flex
+  margin-bottom: -92px
+  width: 888px
+  max-width: 100%
+  flex-direction: column
+
+
+.hero-title 
+  font: $font-hero-title
+
+
+.hero-description 
+  align-self: start
+  margin-top: 50px
+  font: $font-hero-description
+
+
+.about-section 
+  width: 100%
+
+
+.about-content 
+  gap: 20px
+  display: flex
+
+
+.image-column 
+  display: flex
+  flex-direction: column
+  line-height: normal
+  width: 56%
+  margin-left: 0
+
+
+.about-image 
+  aspect-ratio: 1.46
+  object-fit: contain
+  object-position: center
+  width: 100%
+  border-radius: 0 0 20px 0
+  flex-grow: 1
+
+
+.text-column 
+  display: flex
+  flex-direction: column
+  line-height: normal
+  width: 44%
+  margin-left: 20px
+
+
+.text-content 
+  display: flex
+  flex-direction: column
+  align-self: stretch
+  color: $primary-color
+  margin: auto 0
+  font: $font-text-content
+
+
+.about-title 
+  align-self: start
+  font: $font-about-title
+
+
+.about-description 
+  margin-top: 62px
+
+
+.additional-info 
+  margin-top: 28px
+
+
+// Медиазапросы
+@media (max-width: 991px) 
+  .hero-section,
+  .about-section 
+    max-width: 100%
+  
+
+  .hero-content-wrapper 
+    max-width: 100%
+    padding: 100px 20px
+  
+
+  .hero-text-container 
+    margin-bottom: 10px
+  
+
+  .hero-title 
+    max-width: 100%
+    font-size: 40px
+  
+
+  .hero-description 
+    max-width: 100%
+    margin-top: 40px
+  
+
+  .about-content 
+    flex-direction: column
+    align-items: stretch
+    gap: 0
+  
+
+  .image-column,
+  .text-column,
+  .about-image,
+  .text-content,
+  .about-description,
+  .additional-info 
+    width: 100%
+    max-width: 100%
+    margin-top: 40px
+ 
