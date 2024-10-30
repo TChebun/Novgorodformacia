@@ -366,10 +366,10 @@ textarea
 //Медиазапросы
 @media screen and (max-width: 1670px)
   .addresses__wrapper
-    padding-left: 25px
-    padding-right: 25px
+    padding-left: 35px
+    padding-right: 35px
   .addresses__maps
-    gap: 80px
+    justify-content: center
     
   .addresses__map
     iframe
@@ -385,6 +385,16 @@ textarea
     .address
       font-size: 1.125rem
       margin-bottom: 10px
+  .owl-nav
+    position: absolute
+    top: calc(45% - 48px)
+
+@media screen and (max-width: 1560px)
+  .addresses__maps
+    gap: 80px 
+  .owl-nav
+    position: absolute
+    top: calc(40% - 48px)
 
 @media screen and (max-width: 1399px)
   .advantages
@@ -511,6 +521,26 @@ textarea
     width: 300px
     .item
       width: 300px
+  .owl-nav
+    position: absolute
+    top: calc(33% - 48px)
+
+@media screen and (max-width: 400px)
+  .addresses__maps
+    gap: 30px
+  .addresses__map
+    iframe
+      width: 280px
+  .addresses__buttons
+    flex-direction: column
+  
+  .carousel-wrapper
+    width: 220px
+  .owl-carousel
+    width: 220px
+    .item
+      width: 220px
+
 
 //Футер
 .footer
