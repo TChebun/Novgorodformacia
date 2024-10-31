@@ -13,8 +13,6 @@
   font-weight: 600
   line-height: 40.16px
 
-
-
 //Хедер
 .navbar
   width: 100%
@@ -42,24 +40,22 @@
 .mission
   display: flex
   &__title
-    color:$text-color
-    font-family:'Mulish-Bold'
+    color: $text-color
+    font-family: 'Mulish-Bold'
   &__text
-    color:$text-color
+    color: $text-color
     font-family: 'Fira Sans'
 
 //Четвертый экран - Преимущества
 .advantages
   &__wrapper
-    max-width: 1920px
+    max-width: 1590px
     margin: 0 auto
     color: $text-color
-    padding-left: 8.542vw
-    padding-right: 8.438vw
     font-family: 'Fira Sans'
     font-size: 1rem
     font-weight: 400
-    line-height: 19.2px
+    line-height: 1.2
   &__box
     display: flex
     flex-wrap: wrap
@@ -78,21 +74,17 @@
     font-family: 'Mulish'
     font-size: 2rem
     font-weight: 600
-    line-height: 40.16px
+    line-height: 1.255
     padding-bottom: 3.229vw
   &__subtitle
     font-size: 1.5rem
-    line-height: 28.8px
+    line-height: 1.2
     padding-bottom: 15px
 
 //Пятый экран - Форма обратной связи
 .form
-  &__wrapper
-    max-width: 1920px
-    margin: 0 auto
-    padding-top: 506px
-    position: relative
-  &__wrapper::before
+  position: relative
+  &::before
     background-image: url("/assets/images/img-before.svg")
     content: ""
     width: 100%
@@ -100,16 +92,31 @@
     position: absolute
     left: 0
     top: -46px
-    background-position: cover
+    background-size: cover
     background-repeat: no-repeat
+    z-index: -1
+  &::after
+    background-image: url("/assets/images/img-after.svg")
+    content: ""
+    width: 100%
+    height: 716px
+    position: absolute
+    left: 0
+    top: 668px
+    background-size: cover
+    background-repeat: no-repeat
+    z-index: -2
+  &__wrapper
+    max-width: 1590px
+    margin: 0 auto
+    padding-top: 506px
+    position: relative
   &__title
     font-family: 'Mulish'
     font-size: 2rem
     font-weight: 600
-    line-height: 40.16px
-    padding-left: 8.542vw
-    padding-right: 8.438vw
-    padding-bottom: 3.229vw
+    line-height: 1.255
+    padding-bottom: 40px
     color: rgb(255, 255, 255)
     position: relative
   &__user
@@ -125,19 +132,18 @@
     font-family: 'Fira Sans'
     font-size: 1.125rem
     font-weight: 400
-    line-height: 21.6px
+    line-height: 1.2
     color: rgb(255, 255, 255)
     padding-top: 6px
     position: relative
   &__contacts
     padding-top: 2.552vw
-    padding-left: 8.542vw
     position: relative
   &__contacts-text
     font-family: 'Mulish'
     font-size: 2rem
     font-weight: 600
-    line-height: 40.16px
+    line-height: 1.255
     color: rgb(255, 255, 255)
     padding-bottom: 1.823vw
   &__contacts-box a
@@ -146,14 +152,19 @@
     font-family: 'Fira Sans'
     font-size: 1.5rem
     font-weight: 400
-    line-height: 28.8px
+    line-height: 1.2
     padding-left: 60px
     padding-right: 22px
-  &__contacts-button
+  &__contacts-box
     width: 271px
     height: 56px
     position: relative
-  &__contacts-button:hover
+    border-radius: 20px
+    background-color: $accent-color
+    display: flex
+    align-items: center
+    justify-content: center
+  &__contacts-box:hover
     transform: scale(0.95)
   &__contacts-img
     width: 37px
@@ -163,13 +174,17 @@
     top: 11px
   &__social
     padding-top: 1.823vw
-    padding-bottom: 332px
+    padding-bottom: 233px
     display: flex
     gap: 1.979vw
   &__social-button
+    background-color: $accent-color
     width: 50px
     height: 50px
     border-radius: 25px
+    display: flex
+    align-items: center
+    justify-content: center
   &__social-button:hover
     transform: scale(0.95)
 
@@ -177,27 +192,14 @@ form
   display: flex
   gap: 21px
   width: 100%
-  background-color: rgba(138, 184, 48, 1)
   position: relative
-  padding-left: 8.542vw
-  padding-right: 8.438vw
-  &::before
-    background-image: url("/assets/images/img-after.svg")
-    content: ""
-    width: 100%
-    height: 716px
-    position: absolute
-    left: 0
-    top: 161px
-    background-position: cover
-    background-repeat: no-repeat
 
 button
   color: rgb(255, 255, 255)
   font-family: 'Fira Sans'
   font-size: 1.5rem
   font-weight: 400
-  line-height: 28.8px
+  line-height: 1.2
   border: none
   border-radius: 20px
   background-color: $accent-color
@@ -216,6 +218,7 @@ input
   border-radius: 20px
   padding: 24px 41px
   width: 100%
+  height: 70px
   outline: 0
   position: relative
 
@@ -224,7 +227,7 @@ textarea
   border-radius: 20px
   padding: 25px 41px
   width: 100%
-  height: 100%
+  min-height: 142px
   outline: 0
   position: relative
   &::-webkit-resizer
@@ -234,7 +237,7 @@ textarea
   color: $text-color
   font-family: 'Fira Sans'
   font-size: 1.125rem
-  line-height: 21.6px
+  line-height: 1.2
   text-align: start
 //Карты-адреса
 .addresses
@@ -243,7 +246,7 @@ textarea
 
   &__wrapper
     max-width: 1590px
-    margin: 0 auto 
+    margin: 0 auto
     position: relative
     font-family: "Fira Sans"
 
@@ -251,7 +254,7 @@ textarea
     margin-bottom: 62px
 
   &__buttons
-    display: flex 
+    display: flex
     gap: 24px
     margin-bottom: 62px
     max-width: 918px
@@ -272,7 +275,7 @@ textarea
     transition: all 0.3s ease
     &:hover
       transform: scale(0.95)
-    
+
   &__button.active
     background-color: #F47F19
 
@@ -319,14 +322,14 @@ textarea
   .card
     display: flex
     flex-direction: column
-    width: 100% 
+    width: 100%
     justify-content: center
     height: 152px
-    border: 1px solid $accent-color 
+    border: 1px solid $accent-color
     border-radius: 10px
     padding: 15px
     background-color: white
-        
+
   .name
     font-size: 1.5rem
     margin-bottom: 20px
@@ -353,9 +356,9 @@ textarea
     z-index: 10
 
   .owl-prev
-    position: absolute 
+    position: absolute
     left: -55px // Располагаем слева от карусели
-    width:48px
+    width: 48px
 
   .owl-next
     position: absolute
@@ -373,7 +376,7 @@ textarea
     padding-right: 35px
   .addresses__maps
     justify-content: center
-    
+
   .addresses__map
     iframe
       max-width: 700px
@@ -383,18 +386,25 @@ textarea
     .item
       width: 280px
     .name
-      font-size: 1.375rem 
+      font-size: 1.375rem
       margin-bottom: 10px
     .address
       font-size: 1.125rem
       margin-bottom: 10px
 
+@media screen and (max-width: 1622px)
+  .advantages__wrapper
+    padding-left: 16px
+    padding-right: 16px
+
+  .form
+    &__wrapper
+      padding-left: 16px
+      padding-right: 16px
 
 @media screen and (max-width: 1560px)
   .addresses__maps
-    gap: 80px 
-  
-  
+    gap: 80px
 
 @media screen and (max-width: 1399px)
   .advantages
@@ -425,7 +435,6 @@ textarea
       margin-bottom: 8px
     .address
       font-size: 16px
-  
 
 @media screen and (max-width: 1199px)
   .advantages
@@ -442,10 +451,10 @@ textarea
       margin-bottom: 40px
       padding-left: 30px
     &__buttons
-        gap: 15px
-        margin: 0 auto 
+      gap: 15px
+      margin: 0 auto
     &__button
-        font-size: 20px
+      font-size: 20px
     &__maps
       flex-direction: column
       align-items: center
@@ -470,8 +479,8 @@ textarea
     flex-direction: column
 
 .addresses
-    &__title
-      margin-bottom: 35px
+  &__title
+    margin-bottom: 35px
     &__buttons
       margin-bottom: 40px
 
@@ -505,12 +514,13 @@ textarea
   button
     width: 100%
   .form
-    &__contacts-button
-      width: 60%
+    &__contacts-box
+      max-width: 80%
       min-height: fit-content
     &__contacts-img
       display: none
-
+    &__contacts-box a
+      padding: 16px
 
   .addresses__map
     iframe
@@ -524,7 +534,6 @@ textarea
     width: 300px
     .item
       width: 300px
-  
 
 @media screen and (max-width: 400px)
   .addresses__maps
@@ -534,7 +543,7 @@ textarea
       width: 280px
   .addresses__buttons
     flex-direction: column
-  
+
   .carousel-wrapper
     width: 220px
   .owl-carousel
@@ -542,20 +551,19 @@ textarea
     .item
       width: 220px
 
-
 //Футер
 .footer
- width: 100%
- &__container
-  display: flex
-  background-color:$primary-color
-  justify-content: space-between
-  text-align: center
-  align-items: center
- &__content
-  width: 25%
-  line-height: 100px
-  color: #FFFFFF
+  width: 100%
+  &__container
+    display: flex
+    background-color: $primary-color
+    justify-content: space-between
+    text-align: center
+    align-items: center
+  &__content
+    width: 25%
+    line-height: 100px
+    color: #FFFFFF
 //Первый и второй экран база
 $primary-color: #1d3110
 $font-hero-title: 700 60px Mulish, sans-serif
@@ -564,7 +572,7 @@ $font-about-title: 600 32px Mulish, sans-serif
 $font-text-content: 400 16px Fira Sans, sans-serif
 
 //Первый и второй экран миксин
-@mixin visually-hidden 
+@mixin visually-hidden
   position: absolute
   width: 1px
   height: 1px
@@ -575,7 +583,7 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   border: 0
 
 //Первый и второй экран
-.hero-section 
+.hero-section
   z-index: 10
   display: flex
   width: 100%
@@ -585,12 +593,10 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   padding: 1px 0
   min-height: 1039px
 
-
-.visually-hidden 
+.visually-hidden
   @include visually-hidden
 
-
-.hero-content-wrapper 
+.hero-content-wrapper
   display: flex
   flex-direction: column
   position: relative
@@ -600,8 +606,7 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   justify-content: center
   padding: 406px 80px
 
-
-.hero-background 
+.hero-background
   position: absolute
   inset: 0
   height: 100%
@@ -609,8 +614,7 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   object-fit: cover
   object-position: center
 
-
-.hero-text-container 
+.hero-text-container
   position: relative
   display: flex
   margin-bottom: -92px
@@ -618,35 +622,29 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   max-width: 100%
   flex-direction: column
 
-
-.hero-title 
+.hero-title
   font: $font-hero-title
 
-
-.hero-description 
+.hero-description
   align-self: start
   margin-top: 50px
   font: $font-hero-description
 
-
-.about-section 
+.about-section
   width: 100%
 
-
-.about-content 
+.about-content
   gap: 20px
   display: flex
 
-
-.image-column 
+.image-column
   display: flex
   flex-direction: column
   line-height: normal
   width: 56%
   margin-left: 0
 
-
-.about-image 
+.about-image
   aspect-ratio: 1.46
   object-fit: contain
   object-position: center
@@ -654,16 +652,14 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   border-radius: 0 0 20px 0
   flex-grow: 1
 
-
-.text-column 
+.text-column
   display: flex
   flex-direction: column
   line-height: normal
   width: 44%
   margin-left: 20px
 
-
-.text-content 
+.text-content
   display: flex
   flex-direction: column
   align-self: stretch
@@ -671,59 +667,48 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   margin: auto 0
   font: $font-text-content
 
-
-.about-title 
+.about-title
   align-self: start
   font: $font-about-title
 
-
-.about-description 
+.about-description
   margin-top: 62px
 
-
-.additional-info 
+.additional-info
   margin-top: 28px
 
-
 // Медиазапросы
-@media (max-width: 991px) 
+@media (max-width: 991px)
   .hero-section,
-  .about-section 
+  .about-section
     max-width: 100%
-  
 
-  .hero-content-wrapper 
+  .hero-content-wrapper
     max-width: 100%
     padding: 100px 20px
-  
 
-  .hero-text-container 
+  .hero-text-container
     margin-bottom: 10px
-  
 
-  .hero-title 
+  .hero-title
     max-width: 100%
     font-size: 40px
-  
 
-  .hero-description 
+  .hero-description
     max-width: 100%
     margin-top: 40px
-  
 
-  .about-content 
+  .about-content
     flex-direction: column
     align-items: stretch
     gap: 0
-  
 
   .image-column,
   .text-column,
   .about-image,
   .text-content,
   .about-description,
-  .additional-info 
+  .additional-info
     width: 100%
     max-width: 100%
     margin-top: 40px
- 
