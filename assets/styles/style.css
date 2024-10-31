@@ -31,6 +31,13 @@
   box-sizing: border-box;
 }
 
+.title {
+  font-family: "Mulish";
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 40.16px;
+}
+
 .navbar {
   width: 100%;
 }
@@ -109,35 +116,38 @@
   padding-bottom: 15px;
 }
 
+.form {
+  position: relative;
+}
+.form::before {
+  background-image: url("/assets/images/img-before.svg");
+  content: "";
+  width: 100%;
+  height: 716px;
+  position: absolute;
+  left: 0;
+  top: -46px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.form::after {
+  background-image: url("/assets/images/img-after.svg");
+  content: "";
+  width: 100%;
+  height: 716px;
+  position: absolute;
+  left: 0;
+  top: 668px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
 .form__wrapper {
   max-width: 1590px;
   margin: 0 auto;
   padding-top: 506px;
   position: relative;
-}
-.form__wrapper::before {
-  background-image: url("/assets/images/img-before.svg");
-  content: "";
-  width: calc(100% + 328px);
-  height: 716px;
-  position: absolute;
-  left: -164px;
-  top: -46px;
-  background-position: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-.form__wrapper::after {
-  background-image: url("/assets/images/img-after.svg");
-  content: "";
-  width: calc(100% + 328px);
-  height: 716px;
-  position: absolute;
-  left: -164px;
-  top: 769px;
-  background-position: cover;
-  background-repeat: no-repeat;
-  z-index: -2;
 }
 .form__title {
   font-family: "Mulish";
@@ -210,7 +220,7 @@
 }
 .form__social {
   padding-top: 1.823vw;
-  padding-bottom: 332px;
+  padding-bottom: 233px;
   display: flex;
   gap: 1.979vw;
 }
@@ -232,17 +242,6 @@ form {
   gap: 21px;
   width: 100%;
   position: relative;
-}
-form::before {
-  background-color: rgb(138, 184, 48);
-  content: "";
-  width: calc(100% + 328px);
-  max-width: 1920px;
-  height: 120px;
-  position: absolute;
-  left: -164px;
-  top: 65px;
-  z-index: -2;
 }
 
 button {
@@ -310,29 +309,27 @@ textarea::-webkit-resizer {
   margin-bottom: 159px;
 }
 .addresses__wrapper {
-  max-width: 1663px;
-  /* margin: 0 auto */
+  max-width: 1590px;
+  margin: 0 auto;
+  position: relative;
+  font-family: "Fira Sans";
 }
-.addresses__wrapper__title {
-  font-size: 2rem;
+.addresses__title {
   margin-bottom: 62px;
-  padding-left: 8.542vw;
 }
-.addresses__wrapper__buttons {
+.addresses__buttons {
   display: flex;
   gap: 24px;
-  padding-left: 8.542vw;
   margin-bottom: 62px;
   max-width: 918px;
+  font-family: "Fira Sans";
 }
-.addresses__wrapper__button {
+.addresses__button {
   background-color: #67A13C;
   font-size: 1.5rem;
-  font-family: "Fira Sans";
   color: white;
   border: none;
   border-radius: 20px;
-  /* flex: 1 */ 
   max-width: 290px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -342,35 +339,32 @@ textarea::-webkit-resizer {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.addresses__wrapper__button:hover {
+.addresses__button:hover {
   transform: scale(0.95);
 }
-.addresses__wrapper__button.active {
+.addresses__button.active {
   background-color: #F47F19;
 }
-.addresses__wrapper__container {
+.addresses__container {
   position: relative;
 }
-.addresses__wrapper__maps {
-  position: absolute;
+.addresses__maps {
   display: flex;
-  justify-content: flex-start;
   gap: 113px;
-  padding-left: 8.542vw;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.addresses__wrapper__maps.active {
+.addresses__maps.active {
   opacity: 1;
-  visibility: visible;
+  display: flex;
 }
-.addresses__wrapper__map {
+.addresses__map {
   max-width: 787px;
-  min-height: 489px;
+  max-height: 489px;
   overflow: hidden;
 }
-.addresses__wrapper__map iframe {
+.addresses__map iframe {
   width: 787px;
 }
 
@@ -395,32 +389,34 @@ textarea::-webkit-resizer {
 .owl-carousel .item:last-child {
   margin-right: 0;
 }
-.owl-carousel .item .card {
+.owl-carousel .card {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: stretch;
+  justify-content: center;
   height: 152px;
   border: 1px solid #F47F19;
   border-radius: 10px;
   padding: 15px;
   background-color: white;
 }
-.owl-carousel .item .name {
+.owl-carousel .name {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  font-family: "Fira Sans";
 }
-.owl-carousel .item .address {
+.owl-carousel .address {
   font-size: 1.125rem;
   margin-bottom: 15px;
+  font-family: "Fira Sans";
 }
-.owl-carousel .item .address span {
+.owl-carousel .address span {
   font-size: 20px;
 }
 
 .owl-nav {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 48px);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -433,39 +429,28 @@ textarea::-webkit-resizer {
   cursor: pointer;
   z-index: 10;
 }
-.owl-nav .owl-prev .owl-prev, .owl-nav .owl-next .owl-prev {
+.owl-nav .owl-prev {
   position: absolute;
   left: -55px;
   width: 48px;
 }
-.owl-nav .owl-prev .owl-next, .owl-nav .owl-next .owl-next {
+.owl-nav .owl-next {
   position: absolute;
   right: -55px;
   width: 48px;
 }
 
-.owl-dots {
-  display: flex;
+.lengregion-carousel .owl-nav {
+  opacity: 0;
 }
 
-@media screen and (max-width: 1920px) {
-  .form__wrapper::before {
-    width: calc(100% + 17.084vw);
-    left: -8.542vw;
-  }
-  .form__wrapper::after {
-    width: calc(100% + 17.084vw);
-    left: -8.542vw;
-  }
-  form::before {
-    width: calc(100% + 17.084vw);
-    left: -8.542vw;
-  }
-}
 @media screen and (max-width: 1670px) {
+  .addresses__wrapper {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
   .addresses__maps {
-    gap: 80px;
-    /* padding-left: 80px */
+    justify-content: center;
   }
   .addresses__map iframe {
     max-width: 700px;
@@ -494,20 +479,10 @@ textarea::-webkit-resizer {
     padding-left: 16px;
     padding-right: 16px;
   }
-  .form__wrapper::before {
-    width: 100%;
-    left: 0;
-  }
-  .form__wrapper::after {
-    width: 100%;
-    left: 0;
-  }
-  form {
-    background-color: rgb(138, 184, 48);
-  }
-  form::before {
-    width: calc(100% + 32px);
-    left: -16px;
+}
+@media screen and (max-width: 1560px) {
+  .addresses__maps {
+    gap: 80px;
   }
 }
 @media screen and (max-width: 1399px) {
@@ -517,12 +492,8 @@ textarea::-webkit-resizer {
   .addresses__maps {
     gap: 70px;
   }
-  .addresses__map {
-    /* width: 520px  */
-    /* height: 100%  */
-  }
-  iframe {
-    width: 520px;
+  .addresses__map iframe {
+    width: 550px;
   }
   .owl-carousel {
     width: 460px;
@@ -549,14 +520,24 @@ textarea::-webkit-resizer {
   .advantages__item {
     flex-direction: row;
   }
+  .addresses__title {
+    margin-bottom: 35px;
+    padding-left: 10px;
+  }
+  .addresses__title-buttons {
+    margin-bottom: 40px;
+    padding-left: 30px;
+  }
   .addresses__buttons {
     gap: 15px;
+    margin: 0 auto;
   }
   .addresses__button {
     font-size: 20px;
   }
   .addresses__maps {
     flex-direction: column;
+    align-items: center;
     gap: 60px;
   }
   .addresses__map iframe {
@@ -568,11 +549,11 @@ textarea::-webkit-resizer {
   .owl-carousel .item {
     width: 280px;
   }
-  .owl-carousel .item .name {
+  .owl-carousel .name {
     font-size: 1.375rem;
     margin-bottom: 10px;
   }
-  .owl-carousel .item .address {
+  .owl-carousel .address {
     font-size: 18px;
     margin-bottom: 10px;
   }
@@ -581,13 +562,14 @@ textarea::-webkit-resizer {
   form {
     flex-direction: column;
   }
-  .addresses__title {
-    margin-bottom: 35px;
-  }
-  .addresses__buttons {
-    margin-bottom: 40px;
-  }
 }
+.addresses__title {
+  margin-bottom: 35px;
+}
+.addresses__title__buttons {
+  margin-bottom: 40px;
+}
+
 @media screen and (max-width: 767px) {
   .advantages__item {
     flex-direction: column;
@@ -647,6 +629,26 @@ textarea::-webkit-resizer {
   }
   .owl-carousel .item {
     width: 300px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .addresses__maps {
+    gap: 30px;
+  }
+  .addresses__map iframe {
+    width: 280px;
+  }
+  .addresses__buttons {
+    flex-direction: column;
+  }
+  .carousel-wrapper {
+    width: 220px;
+  }
+  .owl-carousel {
+    width: 220px;
+  }
+  .owl-carousel .item {
+    width: 220px;
   }
 }
 .footer {
