@@ -321,7 +321,6 @@ textarea
     flex-direction: column
     width: 100% 
     justify-content: center
-    align-items: stretch
     height: 152px
     border: 1px solid $accent-color 
     border-radius: 10px
@@ -363,6 +362,10 @@ textarea
     right: -55px // Располагаем справа от карусели
     width: 48px
 
+.lengregion-carousel
+  .owl-nav
+    opacity: 0
+
 //Медиазапросы
 @media screen and (max-width: 1670px)
   .addresses__wrapper
@@ -385,16 +388,13 @@ textarea
     .address
       font-size: 1.125rem
       margin-bottom: 10px
-  .owl-nav
-    position: absolute
-    top: calc(45% - 48px)
+
 
 @media screen and (max-width: 1560px)
   .addresses__maps
     gap: 80px 
-  .owl-nav
-    position: absolute
-    top: calc(40% - 48px)
+  
+  
 
 @media screen and (max-width: 1399px)
   .advantages
@@ -425,6 +425,7 @@ textarea
       margin-bottom: 8px
     .address
       font-size: 16px
+  
 
 @media screen and (max-width: 1199px)
   .advantages
@@ -436,8 +437,10 @@ textarea
   .addresses
     &__title
       margin-bottom: 35px
+      padding-left: 10px
     &__title-buttons
       margin-bottom: 40px
+      padding-left: 30px
     &__buttons
         gap: 15px
         margin: 0 auto 
@@ -521,9 +524,7 @@ textarea
     width: 300px
     .item
       width: 300px
-  .owl-nav
-    position: absolute
-    top: calc(33% - 48px)
+  
 
 @media screen and (max-width: 400px)
   .addresses__maps

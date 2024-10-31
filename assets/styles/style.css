@@ -382,7 +382,6 @@ textarea::-webkit-resizer {
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  align-items: stretch;
   height: 152px;
   border: 1px solid #F47F19;
   border-radius: 10px;
@@ -429,6 +428,10 @@ textarea::-webkit-resizer {
   width: 48px;
 }
 
+.lengregion-carousel .owl-nav {
+  opacity: 0;
+}
+
 @media screen and (max-width: 1670px) {
   .addresses__wrapper {
     padding-left: 35px;
@@ -454,18 +457,10 @@ textarea::-webkit-resizer {
     font-size: 1.125rem;
     margin-bottom: 10px;
   }
-  .owl-nav {
-    position: absolute;
-    top: calc(45% - 48px);
-  }
 }
 @media screen and (max-width: 1560px) {
   .addresses__maps {
     gap: 80px;
-  }
-  .owl-nav {
-    position: absolute;
-    top: calc(40% - 48px);
   }
 }
 @media screen and (max-width: 1399px) {
@@ -512,9 +507,11 @@ textarea::-webkit-resizer {
   }
   .addresses__title {
     margin-bottom: 35px;
+    padding-left: 10px;
   }
   .addresses__title-buttons {
     margin-bottom: 40px;
+    padding-left: 30px;
   }
   .addresses__buttons {
     gap: 15px;
@@ -613,10 +610,6 @@ textarea::-webkit-resizer {
   }
   .owl-carousel .item {
     width: 300px;
-  }
-  .owl-nav {
-    position: absolute;
-    top: calc(33% - 48px);
   }
 }
 @media screen and (max-width: 400px) {
