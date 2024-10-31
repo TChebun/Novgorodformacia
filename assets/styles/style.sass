@@ -176,7 +176,6 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   position: absolute
   width: 1px
   height: 1px
-  padding: 0
   margin: -1px
   overflow: hidden
   clip: rect(0, 0, 0, 0)
@@ -190,9 +189,24 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   flex-direction: column
   color: $text-color
   justify-content: center
-  padding: 1px 0
-  min-height: 1039px
 
+  @media (max-width: 1670px)
+    padding: 300px 60px
+
+  @media (max-width: 1399px)
+    padding: 200px 40px
+
+  @media (max-width: 1199px)
+    padding: 150px 30px
+
+  @media (max-width: 991px)
+    padding: 100px 20px
+
+  @media (max-width: 767px)
+    padding: 80px 15px
+
+  @media (max-width: 575px)
+    padding: 60px 10px
 
 .visually-hidden 
   @include visually-hidden
@@ -202,16 +216,11 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   display: flex
   flex-direction: column
   position: relative
-  min-height: 1038px
   max-width: 100%
   align-items: start
   justify-content: center
-  padding: 406px 80px
 
-
-.hero-background 
-  position: absolute
-  inset: 0
+.hero-background
   height: 100%
   width: 100%
   object-fit: cover
@@ -226,17 +235,33 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   left: 0
 
 .hero-text-container 
-  position: relative
+  position: absolute
   display: flex
-  widht: 100%
+  width: 100%
   margin-bottom: -92px
   flex-direction: column
   z-index: 3
 
+  @media (max-width: 991px)
+    margin-bottom: 10px
 
 .hero-title 
   font: $font-hero-title
   width: 895px
+  @media (max-width: 1670px)
+    font-size: 55px
+  @media (max-width: 1399px)
+    font-size: 50px
+  @media (max-width: 1199px)
+    font-size: 45px
+    width: 750px
+  @media (max-width: 991px)
+    font-size: 40px
+    width: 100%
+  @media (max-width: 767px)
+    font-size: 36px
+  @media (max-width: 575px)
+    font-size: 32px
 
 
 .hero-description 
@@ -244,6 +269,21 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   margin-top: 50px
   font: $font-hero-description
   width: 626px
+  
+  @media (max-width: 1670px)
+    font-size: 18px
+  @media (max-width: 1399px)
+    font-size: 17px
+  @media (max-width: 1199px)
+    font-size: 16px
+    margin-top: 40px
+  @media (max-width: 991px)
+    font-size: 15px
+  @media (max-width: 767px)
+    font-size: 14px
+  @media (max-width: 575px)
+    font-size: 13px
+    width: 100%
 
 
 .about-section 
@@ -261,6 +301,15 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   display: flex
   width: 1588px
   margin-left: 0
+  
+  @media (max-width: 1670px)
+    width: 1200px
+  @media (max-width: 1399px)
+    width: 1000px
+  @media (max-width: 1199px)
+    width: 800px
+  @media (max-width: 991px)
+    width: 100%
 
 
 .about-image 
@@ -284,6 +333,22 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   align-self: start
   font: $font-about-title
   margin-left: 205px
+  
+  @media (max-width: 1670px)
+    font-size: 30px
+    margin-left: 180px
+  @media (max-width: 1399px)
+    font-size: 28px
+    margin-left: 150px
+  @media (max-width: 1199px)
+   font-size: 26px
+   margin-left: 100px
+  @media (max-width: 991px)
+    font-size: 24px
+    margin-left: 50px
+  @media (max-width: 767px)
+    font-size: 22px
+    margin-left: 20px
 
 
 .about-description 
@@ -291,6 +356,26 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   max-width: 625px
   line-height: 1.4
   margin-left: 205px
+
+  @media (max-width: 1670px)
+    margin-top: 50px
+    max-width: 500px
+    margin-left: 180px
+  @media (max-width: 1399px)
+    margin-top: 45px
+    margin-left: 150px
+  @media (max-width: 1199px)
+    margin-top: 40px
+    margin-left: 100px
+  @media (max-width: 991px)
+    margin-top: 35px
+    margin-left: 50px
+  @media (max-width: 767px)
+    margin-top: 30px
+    margin-left: 20px
+  @media (max-width: 575px)
+    margin-top: 20px
+    margin-left: 10px
 
 //Третий экран - Наша миссия
 .mission
@@ -301,7 +386,6 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   &__text
     color:$text-color
     font-family: 'Fira Sans'
-
 
 
 //Четвертый экран - Преимущества
@@ -663,45 +747,6 @@ textarea
  
 
 
-// Медиазапросы Первый и второй экран
-@media (max-width: 991px) 
-  .hero-section,
-  .about-section 
-    max-width: 100%
-  
-
-  .hero-content-wrapper 
-    max-width: 100%
-    padding: 100px 20px
-  
-
-  .hero-text-container 
-    margin-bottom: 10px
-  
-
-  .hero-title 
-    max-width: 100%
-    font-size: 40px
-  
-
-  .hero-description 
-    max-width: 100%
-    margin-top: 40px
-  
-
-  .about-content 
-    flex-direction: column
-    align-items: stretch
-    gap: 0
-  
-
-  .image-column,
-  .text-column,
-  .about-image,
-  .text-content,
-  .about-description
- 
-
 //Медиазапросы
 @media screen and (max-width: 1670px)
   .addresses__wrapper
@@ -892,174 +937,3 @@ textarea
   width: 25%
   line-height: 100px
   color: #FFFFFF
-//Первый и второй экран база
-$primary-color: #1d3110
-$font-hero-title: 700 60px Mulish, sans-serif
-$font-hero-description: 400 20px Fira Sans, sans-serif
-$font-about-title: 600 32px Mulish, sans-serif
-$font-text-content: 400 16px Fira Sans, sans-serif
-
-//Первый и второй экран миксин
-@mixin visually-hidden 
-  position: absolute
-  width: 1px
-  height: 1px
-  padding: 0
-  margin: -1px
-  overflow: hidden
-  clip: rect(0, 0, 0, 0)
-  border: 0
-
-//Первый и второй экран
-.hero-section 
-  z-index: 10
-  display: flex
-  width: 100%
-  flex-direction: column
-  color: $primary-color
-  justify-content: center
-  padding: 1px 0
-  min-height: 1039px
-
-
-.visually-hidden 
-  @include visually-hidden
-
-
-.hero-content-wrapper 
-  display: flex
-  flex-direction: column
-  position: relative
-  min-height: 1038px
-  width: 100%
-  align-items: start
-  justify-content: center
-  padding: 406px 80px
-
-
-.hero-background 
-  position: absolute
-  inset: 0
-  height: 100%
-  width: 100%
-  object-fit: cover
-  object-position: center
-
-
-.hero-text-container 
-  position: relative
-  display: flex
-  margin-bottom: -92px
-  width: 888px
-  max-width: 100%
-  flex-direction: column
-
-
-.hero-title 
-  font: $font-hero-title
-
-
-.hero-description 
-  align-self: start
-  margin-top: 50px
-  font: $font-hero-description
-
-
-.about-section 
-  width: 100%
-
-
-.about-content 
-  gap: 20px
-  display: flex
-
-
-.image-column 
-  display: flex
-  flex-direction: column
-  line-height: normal
-  width: 56%
-  margin-left: 0
-
-
-.about-image 
-  aspect-ratio: 1.46
-  object-fit: contain
-  object-position: center
-  width: 100%
-  border-radius: 0 0 20px 0
-  flex-grow: 1
-
-
-.text-column 
-  display: flex
-  flex-direction: column
-  line-height: normal
-  width: 44%
-  margin-left: 20px
-
-
-.text-content 
-  display: flex
-  flex-direction: column
-  align-self: stretch
-  color: $primary-color
-  margin: auto 0
-  font: $font-text-content
-
-
-.about-title 
-  align-self: start
-  font: $font-about-title
-
-
-.about-description 
-  margin-top: 62px
-
-
-.additional-info 
-  margin-top: 28px
-
-
-// Медиазапросы
-@media (max-width: 991px) 
-  .hero-section,
-  .about-section 
-    max-width: 100%
-  
-
-  .hero-content-wrapper 
-    max-width: 100%
-    padding: 100px 20px
-  
-
-  .hero-text-container 
-    margin-bottom: 10px
-  
-
-  .hero-title 
-    max-width: 100%
-    font-size: 40px
-  
-
-  .hero-description 
-    max-width: 100%
-    margin-top: 40px
-  
-
-  .about-content 
-    flex-direction: column
-    align-items: stretch
-    gap: 0
-  
-
-  .image-column,
-  .text-column,
-  .about-image,
-  .text-content,
-  .about-description,
-  .additional-info 
-    width: 100%
-    max-width: 100%
-    margin-top: 40px
- 
