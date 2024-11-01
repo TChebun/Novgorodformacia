@@ -121,6 +121,7 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   margin-bottom: -92px
   flex-direction: column
   z-index: 3
+  padding: 20px
 
   @media (max-width: 991px)
     margin-bottom: 10px
@@ -128,6 +129,7 @@ $font-text-content: 400 16px Fira Sans, sans-serif
 .hero-title 
   font: $font-hero-title
   width: 895px
+
   @media (max-width: 1670px)
     font-size: 55px
   @media (max-width: 1399px)
@@ -158,12 +160,8 @@ $font-text-content: 400 16px Fira Sans, sans-serif
     font-size: 16px
     margin-top: 40px
   @media (max-width: 991px)
-    font-size: 15px
-  @media (max-width: 767px)
-    font-size: 14px
-  @media (max-width: 575px)
-    font-size: 13px
-    width: 100%
+    font-size: 16px
+    width: 50%
 
 
 .about-section 
@@ -174,6 +172,9 @@ $font-text-content: 400 16px Fira Sans, sans-serif
 .about-content 
   display: flex
   max-width: 100%
+  
+  @media (max-width: 991px)
+    flex-direction: column
 
 
 .image-column 
@@ -221,10 +222,14 @@ $font-text-content: 400 16px Fira Sans, sans-serif
     font-size: 28px
   @media (max-width: 1199px)
    font-size: 26px
+   margin-left: 30px
   @media (max-width: 991px)
     font-size: 24px
+    margin-top: 20px
   @media (max-width: 767px)
     font-size: 22px
+    margin-top: 20px
+    
 
 
 .about-description 
@@ -232,6 +237,7 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   max-width: 625px
   line-height: 1.4
   margin-left: 205px
+  text-align: justify
 
   @media (max-width: 1670px)
     margin-top: 50px
@@ -240,12 +246,19 @@ $font-text-content: 400 16px Fira Sans, sans-serif
     margin-top: 45px
   @media (max-width: 1199px)
     margin-top: 40px
+    margin-left: 30px
+    text-align: justify
   @media (max-width: 991px)
-    margin-top: 35px
+    margin-top: 20px
+    margin-left: 20px
+    margin-right: 20px
+    max-width: 100%
+    text-align: justify
   @media (max-width: 767px)
     margin-top: 30px
   @media (max-width: 575px)
     margin-top: 20px
+    margin-left: 20px
 
 //Третий экран - Наша миссия
 .mission
