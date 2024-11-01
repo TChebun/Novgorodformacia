@@ -229,7 +229,7 @@ body {
   display: flex;
   max-width: 100%;
 }
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   .about-content {
     flex-direction: column;
   }
@@ -267,7 +267,7 @@ body {
   height: auto;
   border-bottom-right-radius: 20px;
 }
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   .about-image {
     border-bottom-right-radius: 0;
   }
