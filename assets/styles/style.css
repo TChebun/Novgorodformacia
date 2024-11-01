@@ -229,7 +229,7 @@ body {
   display: flex;
   max-width: 100%;
 }
-@media (max-width: 991px) {
+@media (max-width: 575px) {
   .about-content {
     flex-direction: column;
   }
