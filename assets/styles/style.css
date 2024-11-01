@@ -210,6 +210,7 @@
 }
 .form__contacts-box:hover {
   transform: scale(0.95);
+  transition: 0.2s ease-in;
 }
 .form__contacts-img {
   width: 37px;
@@ -235,6 +236,12 @@
 }
 .form__social-button:hover {
   transform: scale(0.95);
+  transition: 0.2s ease-in;
+}
+.form__social-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form {
@@ -575,6 +582,9 @@ textarea::-webkit-resizer {
     flex-direction: column;
     padding: 30px 15px;
     gap: 15px;
+  }
+  .form__user {
+    flex-direction: column;
   }
   .addresses__title {
     margin-bottom: 30px;

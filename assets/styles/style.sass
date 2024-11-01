@@ -164,6 +164,7 @@
     justify-content: center
   &__contacts-box:hover
     transform: scale(0.95)
+    transition: 0.2s ease-in
   &__contacts-img
     width: 37px
     height: 33.75px
@@ -185,6 +186,11 @@
     justify-content: center
   &__social-button:hover
     transform: scale(0.95)
+    transition: 0.2s ease-in
+  &__social-button a
+    display: flex
+    justify-content: center
+    align-items: center
 
 form
   display: flex
@@ -482,6 +488,10 @@ textarea
       flex-direction: column
       padding: 30px 15px
       gap: 15px
+
+  .form
+    &__user
+      flex-direction: column
 
   .addresses__title
     margin-bottom: 30px
