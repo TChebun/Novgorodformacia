@@ -7,6 +7,9 @@
   padding: 0
   box-sizing: border-box
 
+body
+  min-width: 320px
+
 .title
   font-family: 'Mulish'
   font-size: 2rem
@@ -117,51 +120,36 @@ $font-text-content: 400 16px Fira Sans, sans-serif
 .hero-text-container 
   position: absolute
   display: flex
-  width: 100%
-  margin-bottom: -92px
+  max-width: 895px
+  top: 30%
+  left: 10%
   flex-direction: column
   z-index: 3
-  padding: 20px
-
-  @media (max-width: 991px)
-    margin-bottom: 10px
+  
+  @media (max-width: 575px)
+    top: 20px
+    left: 0
+    padding: 0 16px 
 
 .hero-title 
   font: $font-hero-title
   width: 895px
 
-  @media (max-width: 1670px)
-    font-size: 55px
-  @media (max-width: 1399px)
-    font-size: 50px
-  @media (max-width: 1199px)
-    font-size: 45px
-    width: 750px
   @media (max-width: 991px)
     font-size: 40px
-    width: 100%
   @media (max-width: 767px)
     font-size: 36px
-  @media (max-width: 575px)
-    font-size: 32px
+    text-align: center
 
 
 .hero-description 
   align-self: start
   margin-top: 50px
   font: $font-hero-description
-  width: 626px
+  max-width: 626px
   
-  @media (max-width: 1670px)
+  @media (max-width: 575px)
     font-size: 18px
-  @media (max-width: 1399px)
-    font-size: 17px
-  @media (max-width: 1199px)
-    font-size: 16px
-    margin-top: 40px
-  @media (max-width: 991px)
-    font-size: 16px
-    width: 50%
 
 
 .about-section 
@@ -197,6 +185,24 @@ $font-text-content: 400 16px Fira Sans, sans-serif
   max-width: 100%
   height: auto
 
+  @media (max-width: 1670px)
+    border-bottom-right-radius: 18px
+
+  @media (max-width: 1399px)
+    border-bottom-right-radius: 16px
+
+  @media (max-width: 1199px)
+    border-bottom-right-radius: 14px
+
+  @media (max-width: 991px)
+    border-bottom-right-radius: 12px
+
+  @media (max-width: 767px)
+    border-bottom-right-radius: 10px
+
+  @media (max-width: 575px)
+    width: 100%
+
 
 .text-column 
   display: flex
@@ -220,6 +226,7 @@ $font-text-content: 400 16px Fira Sans, sans-serif
     font-size: 30px
   @media (max-width: 1399px)
     font-size: 28px
+    margin-left: 100px
   @media (max-width: 1199px)
    font-size: 26px
    margin-left: 30px
@@ -244,6 +251,7 @@ $font-text-content: 400 16px Fira Sans, sans-serif
     max-width: 500px
   @media (max-width: 1399px)
     margin-top: 45px
+    margin-left: 100px
   @media (max-width: 1199px)
     margin-top: 40px
     margin-left: 30px

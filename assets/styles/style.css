@@ -31,6 +31,10 @@
   box-sizing: border-box;
 }
 
+body {
+  min-width: 320px;
+}
+
 .title {
   font-family: "Mulish";
   font-size: 2rem;
@@ -174,15 +178,17 @@
 .hero-text-container {
   position: absolute;
   display: flex;
-  width: 100%;
-  margin-bottom: -92px;
+  max-width: 895px;
+  top: 30%;
+  left: 10%;
   flex-direction: column;
   z-index: 3;
-  padding: 20px;
 }
-@media (max-width: 991px) {
+@media (max-width: 575px) {
   .hero-text-container {
-    margin-bottom: 10px;
+    top: 20px;
+    left: 0;
+    padding: 0 16px;
   }
 }
 
@@ -190,36 +196,15 @@
   font: 700 60px Mulish, sans-serif;
   width: 895px;
 }
-@media (max-width: 1670px) {
-  .hero-title {
-    font-size: 55px;
-  }
-}
-@media (max-width: 1399px) {
-  .hero-title {
-    font-size: 50px;
-  }
-}
-@media (max-width: 1199px) {
-  .hero-title {
-    font-size: 45px;
-    width: 750px;
-  }
-}
 @media (max-width: 991px) {
   .hero-title {
     font-size: 40px;
-    width: 100%;
   }
 }
 @media (max-width: 767px) {
   .hero-title {
     font-size: 36px;
-  }
-}
-@media (max-width: 575px) {
-  .hero-title {
-    font-size: 32px;
+    text-align: center;
   }
 }
 
@@ -227,28 +212,11 @@
   align-self: start;
   margin-top: 50px;
   font: 400 20px Fira Sans, sans-serif;
-  width: 626px;
+  max-width: 626px;
 }
-@media (max-width: 1670px) {
+@media (max-width: 575px) {
   .hero-description {
     font-size: 18px;
-  }
-}
-@media (max-width: 1399px) {
-  .hero-description {
-    font-size: 17px;
-  }
-}
-@media (max-width: 1199px) {
-  .hero-description {
-    font-size: 16px;
-    margin-top: 40px;
-  }
-}
-@media (max-width: 991px) {
-  .hero-description {
-    font-size: 16px;
-    width: 50%;
   }
 }
 
@@ -298,6 +266,36 @@
   max-width: 100%;
   height: auto;
 }
+@media (max-width: 1670px) {
+  .about-image {
+    border-bottom-right-radius: 18px;
+  }
+}
+@media (max-width: 1399px) {
+  .about-image {
+    border-bottom-right-radius: 16px;
+  }
+}
+@media (max-width: 1199px) {
+  .about-image {
+    border-bottom-right-radius: 14px;
+  }
+}
+@media (max-width: 991px) {
+  .about-image {
+    border-bottom-right-radius: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .about-image {
+    border-bottom-right-radius: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .about-image {
+    width: 100%;
+  }
+}
 
 .text-column {
   display: flex;
@@ -325,6 +323,7 @@
 @media (max-width: 1399px) {
   .about-title {
     font-size: 28px;
+    margin-left: 100px;
   }
 }
 @media (max-width: 1199px) {
@@ -362,6 +361,7 @@
 @media (max-width: 1399px) {
   .about-description {
     margin-top: 45px;
+    margin-left: 100px;
   }
 }
 @media (max-width: 1199px) {
