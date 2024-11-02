@@ -42,31 +42,47 @@ body {
   line-height: 40.16px;
 }
 
-.navbar {
+.header__wrapper {
   width: 100%;
+  color: #1D3110;
+  font-family: "Fira Sans";
+  font-size: 1.125rem;
+  font-weight: 400;
 }
-.navbar__list {
+.header__conteiner {
+  max-width: 1590px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1vw 1vw 0vw 1vw;
 }
-.navbar__item {
-  display: flex;
-  width: 180px;
-  height: 90px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-.navbar__link {
+.header__block {
   display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 90px;
+  max-width: 428px;
+}
+.header__block:last-child {
+  width: 550px;
+  margin-right: 20%;
+}
+.header__logo {
+  max-width: 428px;
+  max-height: 120px;
+}
+.header__navbar {
+  width: 550px;
+}
+.header__list {
+  display: flex;
+  justify-content: space-between;
+}
+.header__item {
+  padding-top: 1vw;
+}
+.header__link {
   text-decoration: none;
   color: #1D3110;
 }
-.navbar__link:hover {
-  transform: scale(1.05);
+.header__link:hover {
+  color: #F47F19;
 }
 
 .hero-section {
@@ -368,16 +384,27 @@ body {
   }
 }
 
-.mission {
-  display: flex;
-}
-.mission__title {
-  color: #1D3110;
-  font-family: "Mulish-Bold";
-}
-.mission__text {
+.history__wrapper {
+  max-width: 1590px;
+  padding: 0 1vw 0vw 1vw;
   color: #1D3110;
   font-family: "Fira Sans";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.history__blok {
+  padding-top: 3vw;
+}
+.history__title {
+  font-family: "Mulish";
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding-bottom: 3.229vw;
+}
+.history__text {
+  padding-bottom: 1rem;
 }
 
 .advantages__wrapper {
@@ -752,6 +779,31 @@ textarea::-webkit-resizer {
 
 .lengregion-carousel .owl-nav {
   opacity: 0;
+}
+
+.footer {
+  width: 100%;
+  background-color: #67A13C;
+}
+.footer__container {
+  max-width: 1590px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__content {
+  font-family: Fira Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.footer__link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.footer__link:hover {
+  color: #F47F19;
 }
 
 @media screen and (max-width: 1670px) {
