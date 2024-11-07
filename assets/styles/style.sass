@@ -48,6 +48,7 @@ body
   &__link
     text-decoration: none
     color: $text-color
+    transition: color 0.3s ease
   &__link:hover
     color: $accent-color
 
@@ -273,6 +274,7 @@ $font-text-content: 400 16px Fira Sans, sans-serif
 .history
   &__wrapper
     max-width: 1590px
+    margin: 0
     padding: 0 1vw 0vw 1vw
     color: $text-color
     font-family: 'Fira Sans'
@@ -288,6 +290,7 @@ $font-text-content: 400 16px Fira Sans, sans-serif
     line-height: 1.2
     padding-bottom: 3.229vw
   &__text
+    text-align: justify
     padding-bottom: 1rem
     
 
@@ -624,6 +627,7 @@ textarea
   background-color: $primary-color
   &__container
     max-width: 1590px
+    margin: 0
     display: flex
     justify-content: space-between
   &__content
@@ -636,6 +640,7 @@ textarea
   &__link
     text-decoration: none
     color: #FFFFFF
+    transition: color 0.3s ease
   &__link:hover
     color: $accent-color
 
@@ -827,17 +832,3 @@ textarea
     .item
       width: 220px
 
-
-//Футер
-.footer
- width: 100%
- &__container
-  display: flex
-  background-color:$primary-color
-  justify-content: space-between
-  text-align: center
-  align-items: center
- &__content
-  width: 25%
-  line-height: 100px
-  color: #FFFFFF
