@@ -18,35 +18,31 @@ body
 
 //Хедер
 .header
-  &__wrapper
+  &__navbar
+    max-width: 1590px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+  &__logo
+    max-width: 428px
+    margin-top: 1vw
+  &__logo img
     width: 100%
-    color: $text-color
+    height: auto
+  &__list
+    max-width: 550px
+    width: 100%
+    margin-right: 20%
+    display: flex
+    justify-content: space-between
+    column-gap: 1vw
+  &__item
+    padding-top: 2vw 
+  &__link
+    text-decoration: none
     font-family: 'Fira Sans'
     font-size: 1.125rem
     font-weight: 400
-  &__conteiner
-    max-width: 1590px
-    display: flex
-    justify-content: space-between
-    padding: 1vw 1vw 0vw 1vw
-  &__block
-    display: block
-    max-width: 428px
-  &__block:last-child
-    width: 550px
-    margin-right:20%
-  &__logo
-    max-width: 428px
-    max-height: 120px
-  &__navbar
-    width: 550px
-  &__list
-    display: flex
-    justify-content: space-between
-  &__item
-    padding-top: 1vw 
-  &__link
-    text-decoration: none
     color: $text-color
     transition: color 0.3s ease
   &__link:hover
@@ -273,25 +269,24 @@ $font-text-content: 400 16px Fira Sans, sans-serif
 //Третий экран - история и миссия
 .history
   &__wrapper
-    max-width: 1590px
-    margin: 0
-    padding: 0 1vw 0vw 1vw
+    margin-top: 4vw
     color: $text-color
-    font-family: 'Fira Sans'
-    font-size: 1rem
-    font-weight: 400
-    line-height: 1.2
   &__blok
-    padding-top: 3vw
+    max-width: 1590px
+    margin: 0 auto
   &__title
     font-family: "Mulish"
     font-size: 2rem
     font-weight: 600
     line-height: 1.2
-    padding-bottom: 3.229vw
+    padding-bottom: 3vw
   &__text
     text-align: justify
-    padding-bottom: 1rem
+    padding-bottom: 4vw
+    font-family: 'Fira Sans'
+    font-size: 1rem
+    font-weight: 400
+    line-height: 1.4
     
 
 //Четвертый экран - Преимущества
@@ -621,29 +616,6 @@ textarea
   .owl-nav
     opacity: 0
 
-//Футер
-.footer
-  width: 100%
-  background-color: $primary-color
-  &__container
-    max-width: 1590px
-    margin: 0
-    display: flex
-    justify-content: space-between
-  &__content
-    font-family: Fira Sans
-    font-size: 20px
-    font-weight: 400
-    line-height: 24px
-    text-align: center
-    color: #FFFFFF
-  &__link
-    text-decoration: none
-    color: #FFFFFF
-    transition: color 0.3s ease
-  &__link:hover
-    color: $accent-color
-
 //Медиазапросы
 @media screen and (max-width: 1670px)
   .addresses__wrapper
@@ -832,3 +804,23 @@ textarea
     .item
       width: 220px
 
+//Футер
+.footer
+  background-color: $primary-color
+  &__wrapper
+    max-width: 1590px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+  &__text
+    font-family: Fira Sans
+    font-size: 20px
+    font-weight: 400
+    line-height: 4
+    color: #FFFFFF
+  &__link
+    text-decoration: none
+    color: #FFFFFF
+    transition: color 0.3s ease
+  &__link:hover
+    color: $accent-color
