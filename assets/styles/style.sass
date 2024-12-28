@@ -17,27 +17,68 @@ body
   line-height: 40.16px
 
 //Хедер
-.navbar
-  width: 100%
-  &__list
-    display: flex
-    justify-content: center
-  &__item
-    display: flex
-    width: 180px
-    height: 90px
-    text-align: center
-    justify-content: center
-    align-items: center
-  &__link
-    display: block
+.header
+  position: relative
+
+  &__img
+    font-size: 0
+    img
+      max-width: 100%
+      height: auto
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background-image: url('../images/image-fluid.png')
+      background-repeat: no-repeat
+      background-size: contain
+
+  &__navbar
     width: 100%
-    height: 100%
-    line-height: 90px
+    max-width: 1590px
+    margin: 0 auto
+    padding: 0 16px
+    display: flex
+    justify-content: space-between
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 1
+  &__logo
+    max-width: 428px
+    margin-top: 1vw
+  &__logo img
+    width: 100%
+    height: auto
+  &__list
+    max-width: 550px
+    width: 100%
+    margin-right: 20%
+    display: flex
+    justify-content: space-between
+    column-gap: 1vw
+  &__item
+    padding-top: 2vw 
+  &__link
     text-decoration: none
+    font-family: 'Fira Sans'
+    font-size: 1.125rem
+    font-weight: 400
     color: $text-color
+    transition: color 0.3s ease
   &__link:hover
-    transform: scale(1.05)
+    color: $accent-color
+
+  @media (max-width: 1440px)
+    &__list
+      margin-right: 0
+
+
 
 //Первый и второй экран база
 $font-hero-title: 700 60px Mulish, sans-serif
@@ -45,111 +86,69 @@ $font-hero-description: 400 20px Fira Sans, sans-serif
 $font-about-title: 600 32px Mulish, sans-serif
 $font-text-content: 400 16px Fira Sans, sans-serif
 
-//Первый и второй экран миксин
-@mixin visually-hidden 
-  position: absolute
-  width: 1px
-  height: 1px
-  margin: -1px
-  overflow: hidden
-  clip: rect(0, 0, 0, 0)
-  border: 0
-
-//Первый и второй экран
-.hero-section 
-  z-index: 10
-  display: flex
-  max-width: 100%
-  flex-direction: column
-  color: $text-color
-  justify-content: center
-
-
-.visually-hidden 
-  @include visually-hidden
-
-
-.hero-content-wrapper 
-  display: flex
-  flex-direction: column
-  position: relative
-  max-width: 100%
-  align-items: start
-  justify-content: center
-
-.hero-background
-  height: 100%
+.hero-section
+  max-width: 1590px
   width: 100%
-  object-fit: cover
-  object-position: right
+  margin: 0 auto
+  padding: 0 16px
+  position: absolute
+  top: 353px
+  left: 50%
+  transform: translateX(-50%)
   z-index: 1
 
-  @media (max-width: 1670px)
-    height: 800px
-  @media (max-width: 1399px)
-    height: 700px
-  @media (max-width: 1199px)
-    height: 600px
-  @media (max-width: 991px)
-    height: 500px
-  @media (max-width: 767pxpx)
-    height: 400px
-  @media (max-width: 575pxpx)
-    height: 300px
-
-.hero-image-fluid
-  position: absolute
-  z-index: 2
-  width: 100%
-  height: 100%
-  left: 0
-
-  @media (max-width: 1670px)
-    height: 800px
-  @media (max-width: 1399px)
-    height: 700px
-  @media (max-width: 1199px)
-    height: 600px
-  @media (max-width: 991px)
-    height: 500px
-  @media (max-width: 767pxpx)
-    height: 400px
-  @media (max-width: 575pxpx)
-    height: 300px
-
-.hero-text-container 
-  position: absolute
-  display: flex
-  max-width: 895px
-  top: 30%
-  left: 10%
-  flex-direction: column
-  z-index: 3
-  
-  @media (max-width: 575px)
-    top: 20%
-    left: 0
-    padding: 0 16px 
-
-.hero-title 
+.hero-title
   font: $font-hero-title
+  max-width: 895px
+  margin-bottom: 20px
 
-  @media (max-width: 991px)
-    font-size: 40px
-  @media (max-width: 767px)
-    font-size: 36px
-    text-align: center
-
-
-.hero-description 
-  align-self: start
-  margin-top: 50px
+.hero-description
   font: $font-hero-description
-  max-width: 626px
+
+@media (max-width: 1440px)
+  .hero-section
+    top: 253px
+
+  .hero-title
+    font: 700 40px Mulish, sans-serif
   
-  @media (max-width: 575px)
-    font-size: 18px
-    text-align: center
+  .hero-description
+    font: 400 20px Fira Sans, sans-serif
+
+@media (max-width: 1200px)
+  .hero-section
+    top: 200px
+
+
+@media (max-width: 992px)
+  .header
+    &__img
+      height: 600px
+      &::before
+        height: 100%
+        background-size: cover
+      img
+        height: 100%
+        object-fit: cover
+
+    &__logo
+      max-width: 280px
+
+    &__list
+      column-gap: 20px
+      max-width: 450px
+      align-items: center
+    &__item
+      padding-top: 0
+
+  .hero-section
+    top: 200px
+
+  .hero-title
+    font: 700 35px Mulish, sans-serif
+  
+  .hero-description
+    font: 400 20px Fira Sans, sans-serif
 
 
 .about-section 
@@ -255,16 +254,31 @@ $font-text-content: 400 16px Fira Sans, sans-serif
     margin-top: 20px
     margin-left: 20px
 
-//Третий экран - Наша миссия
-.mission
-  display: flex
+//Третий экран - история и миссия
+.history
+  &__wrapper
+    margin-top: 4vw
+    color: $text-color
+    padding: 0 16px
+  &__blok
+    max-width: 1590px
+    margin: 0 auto
   &__title
-    color: $text-color
-    font-family: 'Mulish-Bold'
+    font-family: "Mulish"
+    font-size: 2rem
+    font-weight: 600
+    line-height: 1.2
+    padding-bottom: 3vw
   &__text
-    color: $text-color
+    text-align: justify
+    padding-bottom: 2vw
     font-family: 'Fira Sans'
-
+    font-size: 1rem
+    font-weight: 400
+    line-height: 1.4
+    &:nth-child(2n+1)
+      padding-bottom: 4vw
+    
 
 //Четвертый экран - Преимущества
 .advantages
@@ -594,6 +608,26 @@ textarea
     opacity: 0
 
 
+//Футер
+.footer
+  background-color: $primary-color
+  &__wrapper
+    max-width: 1590px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    padding: 40px 16px
+  &__text
+    font-family: Fira Sans
+    font-size: 20px
+    font-weight: 400
+    color: #FFFFFF
+  &__link
+    text-decoration: none
+    color: #FFFFFF
+    transition: color 0.3s ease
+  &__link:hover
+    color: $accent-color
 
 //Медиазапросы
 @media screen and (max-width: 1670px)
@@ -605,7 +639,7 @@ textarea
     
   .addresses__map
     iframe
-      max-width: 700px
+      max-width: 600px
 
   .owl-carousel
     width: 580px
@@ -767,6 +801,11 @@ textarea
     width: 300px
     .item
       width: 300px
+  
+  .footer__wrapper
+    flex-direction: column
+    align-items: center
+    row-gap: 20px
 
 @media screen and (max-width: 400px)
   .addresses__maps
@@ -784,16 +823,3 @@ textarea
       width: 220px
 
 
-//Футер
-.footer
- width: 100%
- &__container
-  display: flex
-  background-color:$primary-color
-  justify-content: space-between
-  text-align: center
-  align-items: center
- &__content
-  width: 25%
-  line-height: 100px
-  color: #FFFFFF
